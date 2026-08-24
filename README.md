@@ -15,6 +15,8 @@ npm install
 npm run dev
 ```
 
+Then open [http://localhost:3000](http://localhost:3000) in your browser to see the portfolio.
+
 Add a `.env.local` (see `.env.example`) with your own `NEXT_PUBLIC_FORMSPREE_ENDPOINT` for the contact form to work locally.
 
 ## Build
