@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg: #faf5ea;
+  --bg-alt: #f2ead9;
+  --surface: #fffcf5;
+  --ink: #201a12;
+  --ink-soft: #5c4f3d;
+  --ink-faint: #8a7c66;
+  --line: #201a1218;
+  --line-strong: #201a122e;
+  --accent: #9c6f1f;
+  --accent-soft: #f3e4c4;
+  --accent-deep: #7a5416;
+  color-scheme: light;
+}
+
+.dark {
+  --bg: #12100e;
+  --bg-alt: #1a1713;
+  --surface: #1e1a15;
+  --ink: #f2ead9;
+  --ink-soft: #b3a795;
+  --ink-faint: #7d7364;
+  --line: #f2ead91f;
+  --line-strong: #f2ead938;
+  --accent: #c99a4b;
+  --accent-soft: #4a3c22;
+  --accent-deep: #e0b96b;
+  color-scheme: dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-bg: var(--bg);
+  --color-bg-alt: var(--bg-alt);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-faint: var(--ink-faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-deep: var(--accent-deep);
+  --font-sans: var(--font-sans-body);
+  --font-serif: var(--font-serif-display);
+  --font-script: var(--font-script-accent);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
   }
 }
 
+.snap-page {
+  scroll-snap-stop: always;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.container-px {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .container-px {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-px {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
 }
