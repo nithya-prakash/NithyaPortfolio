@@ -15,6 +15,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/nithya-prakash1209/",
   linkedinHandle: "linkedin.com/in/nithya-prakash1209",
   signature: "Created with ☕️, curiosity, and way too many experiments.",
+  resumeHref: "/resume.pdf",
 };
 
 export const heroFacts = ["AI Engineer", "Based in Germany", "Open to opportunities"];

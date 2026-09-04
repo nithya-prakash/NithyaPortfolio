@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
+import { profile } from "@/lib/data";
 
 const links = [
   { href: "#top", label: "Home" },
@@ -57,6 +58,13 @@ export default function Nav() {
         </nav>
 
         <div className="flex items-center gap-3">
+          <a
+            href={profile.resumeHref}
+            download
+            className="hidden rounded-full border border-line px-4 py-1.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent sm:inline-flex"
+          >
+            Resume
+          </a>
           <ThemeToggle />
 
           <button
@@ -94,6 +102,17 @@ export default function Nav() {
                   {link.label}
                 </motion.a>
               ))}
+              <motion.a
+                href={profile.resumeHref}
+                download
+                onClick={() => setOpen(false)}
+                initial={{ opacity: 0, x: -12 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: links.length * 0.04, duration: 0.3 }}
+                className="py-4 text-base text-ink-soft hover:text-ink sm:hidden"
+              >
+                Download Resume
+              </motion.a>
             </div>
           </motion.nav>
         )}

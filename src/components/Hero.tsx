@@ -90,6 +90,13 @@ export default function Hero() {
           >
             Let&apos;s Connect
           </a>
+          <a
+            href={profile.resumeHref}
+            download
+            className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+          >
+            Download Resume
+          </a>
         </motion.div>
 
         <motion.div variants={item} className="mt-8 flex items-center gap-4">
