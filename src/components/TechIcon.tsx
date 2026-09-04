@@ -25,6 +25,10 @@ import {
   SiCelery,
   SiPrometheus,
   SiHuggingface,
+  SiApachekafka,
+  SiMqtt,
+  SiInfluxdb,
+  SiKubernetes,
 } from "react-icons/si";
 
 const iconMap: Record<string, IconType> = {
@@ -53,6 +57,10 @@ const iconMap: Record<string, IconType> = {
   Celery: SiCelery,
   Prometheus: SiPrometheus,
   Transformers: SiHuggingface,
+  Kafka: SiApachekafka,
+  MQTT: SiMqtt,
+  InfluxDB: SiInfluxdb,
+  Kubernetes: SiKubernetes,
 };
 
 export default function TechIcon({

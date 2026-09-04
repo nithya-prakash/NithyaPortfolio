@@ -144,6 +144,21 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/nithya-prakash/GreenGridOptimizer",
   },
+  {
+    number: "07",
+    slug: "indusense",
+    name: "InduSense",
+    description:
+      "A production-grade, event-driven monitoring platform for multi-factory industrial operations: ingests real-time sensor telemetry, detects anomalies, and manages alerts and incidents through a distributed microservices architecture.",
+    stack: ["Python", "FastAPI", "Kafka", "MQTT", "InfluxDB", "Redis", "PostgreSQL", "Next.js", "Docker", "Kubernetes"],
+    highlights: [
+      "Five containerized microservices (API, ingestion, stream processing, anomaly detection, alerting) built with FastAPI",
+      "Real-time telemetry from 1000+ simulated sensors via MQTT, processed through Kafka",
+      "Statistical and ML-based anomaly detection (Isolation Forest) with alert deduplication and incident audit trails",
+      "Full observability stack (Prometheus, Grafana, Jaeger) and a Next.js dashboard for live alerts and telemetry",
+    ],
+    github: "https://github.com/nithya-prakash/InduSense",
+  },
 ];
 
 export type JourneyEntry = {

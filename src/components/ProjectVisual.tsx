@@ -95,6 +95,45 @@ const patterns = [
       <circle cx="238" cy="55" r="18" className="stroke-accent" strokeWidth="2" fill="none" />
     </>
   ),
+  // 07 — distributed nodes / event mesh (microservices, message queues)
+  (
+    <>
+      {[
+        [70, 60],
+        [210, 60],
+        [40, 150],
+        [140, 130],
+        [240, 160],
+        [140, 210],
+      ].map(([x, y], i, arr) => (
+        <line
+          key={`edge-${i}`}
+          x1={arr[i][0]}
+          y1={arr[i][1]}
+          x2={arr[(i + 1) % arr.length][0]}
+          y2={arr[(i + 1) % arr.length][1]}
+          className="stroke-line-strong"
+          strokeWidth="1"
+        />
+      ))}
+      {[
+        [70, 60],
+        [210, 60],
+        [40, 150],
+        [140, 130],
+        [240, 160],
+        [140, 210],
+      ].map(([x, y], i) => (
+        <circle
+          key={`node-${i}`}
+          cx={x}
+          cy={y}
+          r={i === 3 ? 7 : 4.5}
+          className={i === 3 ? "fill-accent" : "fill-ink-soft"}
+        />
+      ))}
+    </>
+  ),
 ];
 
 export default function ProjectVisual({ index }: { index: number }) {
