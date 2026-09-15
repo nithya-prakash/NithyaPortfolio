@@ -73,6 +73,7 @@ export const projects: Project[] = [
       "Production-grade architecture end to end",
     ],
     github: "https://github.com/nithya-prakash/HybridRAG",
+    demo: "https://hybridrag-nithya-prakash.vercel.app",
   },
   {
     number: "02",
