@@ -32,3 +32,5 @@ npm start
 - `src/lib/data.ts` — all portfolio content (bio, projects, skills, education, experience, publications)
 - `public/resume.pdf` — downloadable resume
 - `public/publications/` — published research paper PDF
+
+Live Portfolio : https://nithya-portfolio-silk.vercel.app/
