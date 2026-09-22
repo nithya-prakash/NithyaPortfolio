@@ -44,3 +44,4 @@ next-env.d.ts
 # local editor/tooling notes (dev-only, not project content)
 AGENTS.md
 CLAUDE.md
+.claude/

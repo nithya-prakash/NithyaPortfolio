@@ -4,21 +4,23 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
-import { profile } from "@/lib/data";
-
-const links = [
-  { href: "#top", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#education", label: "Education" },
-  { href: "#experience", label: "Experience" },
-  { href: "#skills", label: "Skills" },
-  { href: "#contact", label: "Contact" },
-];
+import LanguageToggle from "@/components/LanguageToggle";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Nav() {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+
+  const links = [
+    { href: "#top", label: t.nav.home },
+    { href: "#about", label: t.nav.about },
+    { href: "#projects", label: t.nav.projects },
+    { href: "#education", label: t.nav.education },
+    { href: "#experience", label: t.nav.experience },
+    { href: "#skills", label: t.nav.skills },
+    { href: "#contact", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -59,18 +61,19 @@ export default function Nav() {
 
         <div className="flex items-center gap-3">
           <a
-            href={profile.resumeHref}
+            href={t.profile.resumeHref}
             download
             className="hidden rounded-full border border-line px-4 py-1.5 text-sm text-ink transition-colors hover:border-accent hover:text-accent sm:inline-flex"
           >
-            Resume
+            {t.nav.resume}
           </a>
+          <LanguageToggle />
           <ThemeToggle />
 
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={open}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink transition-colors hover:border-accent lg:hidden"
           >
@@ -103,7 +106,7 @@ export default function Nav() {
                 </motion.a>
               ))}
               <motion.a
-                href={profile.resumeHref}
+                href={t.profile.resumeHref}
                 download
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, x: -12 }}
@@ -111,7 +114,7 @@ export default function Nav() {
                 transition={{ delay: links.length * 0.04, duration: 0.3 }}
                 className="py-4 text-base text-ink-soft hover:text-ink sm:hidden"
               >
-                Download Resume
+                {t.nav.downloadResume}
               </motion.a>
             </div>
           </motion.nav>

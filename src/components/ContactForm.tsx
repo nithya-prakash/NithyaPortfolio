@@ -2,12 +2,14 @@
 
 import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
+import { useLanguage } from "@/lib/LanguageContext";
 
 type Status = "idle" | "submitting" | "success" | "error" | "unconfigured";
 
 const FORM_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT;
 
 export default function ContactForm() {
+  const { t } = useLanguage();
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
@@ -46,7 +48,7 @@ export default function ContactForm() {
         animate={{ opacity: 1, y: 0 }}
         className="rounded-xl border border-accent/40 bg-accent/10 px-6 py-8 text-center text-sm text-ink"
       >
-        Thanks — your message is in. I&apos;ll get back to you soon.
+        {t.contactForm.success}
       </motion.div>
     );
   }
@@ -57,26 +59,24 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="grid gap-4 sm:grid-cols-2">
-        <input type="text" name="name" placeholder="Name" required className={fieldClass} />
-        <input type="email" name="email" placeholder="Email" required className={fieldClass} />
+        <input type="text" name="name" placeholder={t.contactForm.namePlaceholder} required className={fieldClass} />
+        <input type="email" name="email" placeholder={t.contactForm.emailPlaceholder} required className={fieldClass} />
       </div>
-      <textarea name="message" placeholder="Message" required rows={5} className={fieldClass} />
+      <textarea name="message" placeholder={t.contactForm.messagePlaceholder} required rows={5} className={fieldClass} />
 
       <button
         type="submit"
         disabled={status === "submitting"}
         className="self-start rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-transform hover:-translate-y-0.5 disabled:translate-y-0 disabled:opacity-60"
       >
-        {status === "submitting" ? "Sending…" : "Send Message"}
+        {status === "submitting" ? t.contactForm.sending : t.contactForm.send}
       </button>
 
       {status === "error" && (
-        <p className="text-sm text-red-400">Something went wrong — please try again, or email me directly.</p>
+        <p className="text-sm text-red-400">{t.contactForm.error}</p>
       )}
       {status === "unconfigured" && (
-        <p className="text-sm text-ink-faint">
-          The contact form isn&apos;t connected yet — reach out directly via email in the meantime.
-        </p>
+        <p className="text-sm text-ink-faint">{t.contactForm.unconfigured}</p>
       )}
     </form>
   );

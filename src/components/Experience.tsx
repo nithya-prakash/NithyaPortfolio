@@ -1,14 +1,18 @@
-import { experience } from "@/lib/data";
+"use client";
+
 import JourneyTimeline from "@/components/JourneyTimeline";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Experience() {
+  const { t } = useLanguage();
+
   return (
     <JourneyTimeline
       id="experience"
-      eyebrow="Experience"
-      index="04"
-      title="Where I've worked, what I'm building."
-      entries={experience}
+      eyebrow={t.experienceSection.eyebrow}
+      index={t.experienceSection.index}
+      title={t.experienceSection.title}
+      entries={t.experience}
     />
   );
 }

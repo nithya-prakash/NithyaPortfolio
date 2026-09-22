@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import HeroCircles from "@/components/HeroCircles";
-import { heroFacts, profile } from "@/lib/data";
+import { useLanguage } from "@/lib/LanguageContext";
 
 const container = {
   hidden: {},
@@ -17,6 +17,8 @@ const item = {
 };
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="top"
@@ -40,35 +42,35 @@ export default function Hero() {
           variants={item}
           className="font-script text-2xl text-accent sm:text-3xl"
         >
-          Hey there,
+          {t.hero.greeting}
         </motion.p>
 
         <motion.h1
           variants={item}
           className="mt-3 text-balance font-serif text-[13vw] font-medium leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-7xl"
         >
-          Hi, I&apos;m Nithya.
+          {t.hero.name}
         </motion.h1>
 
         <motion.h2
           variants={item}
           className="mt-4 max-w-3xl text-balance text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl lg:text-4xl"
         >
-          AI Engineer building intelligent systems that actually work.
+          {t.hero.tagline}
         </motion.h2>
 
         <motion.p
           variants={item}
           className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg"
         >
-          {profile.heroSupport}
+          {t.profile.heroSupport}
         </motion.p>
 
         <motion.div
           variants={item}
           className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ink-soft"
         >
-          {heroFacts.map((fact, i) => (
+          {t.heroFacts.map((fact, i) => (
             <span key={fact} className="flex items-center gap-2">
               {i !== 0 && <span className="h-1 w-1 rounded-full bg-ink-faint" aria-hidden />}
               {fact}
@@ -81,27 +83,27 @@ export default function Hero() {
             href="#projects"
             className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-transform hover:-translate-y-0.5"
           >
-            View Projects
+            {t.hero.viewProjects}
             <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </a>
           <a
             href="#contact"
             className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
           >
-            Let&apos;s Connect
+            {t.hero.connect}
           </a>
           <a
-            href={profile.resumeHref}
+            href={t.profile.resumeHref}
             download
             className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
           >
-            Download Resume
+            {t.hero.downloadResume}
           </a>
         </motion.div>
 
         <motion.div variants={item} className="mt-8 flex items-center gap-4">
           <a
-            href={profile.github}
+            href={t.profile.github}
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
@@ -110,7 +112,7 @@ export default function Hero() {
             <GithubIcon size={17} />
           </a>
           <a
-            href={profile.linkedin}
+            href={t.profile.linkedin}
             target="_blank"
             rel="noreferrer"
             aria-label="LinkedIn"
@@ -124,7 +126,7 @@ export default function Hero() {
           variants={item}
           className="mt-8 font-script text-xl text-ink-faint sm:mt-10 sm:text-2xl"
         >
-          {profile.signature}
+          {t.profile.signature}
         </motion.p>
       </motion.div>
 
@@ -135,7 +137,7 @@ export default function Hero() {
         transition={{ delay: 1.1, duration: 0.6 }}
         className="absolute inset-x-0 bottom-6 mx-auto flex w-fit items-center gap-2 text-xs uppercase tracking-[0.2em] text-ink-faint transition-colors hover:text-accent sm:bottom-8"
       >
-        Scroll
+        {t.hero.scroll}
         <motion.span
           animate={{ y: [0, 5, 0] }}
           transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}

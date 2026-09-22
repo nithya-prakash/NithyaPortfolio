@@ -1,7 +1,11 @@
-import { personality } from "@/lib/data";
+"use client";
+
 import Reveal from "@/components/Reveal";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Personality() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="personality"
@@ -12,9 +16,9 @@ export default function Personality() {
           ☕️
         </span>
         <p className="mt-6 text-balance font-serif text-2xl italic leading-snug text-ink sm:text-3xl">
-          {personality.line1}
+          {t.personality.line1}
         </p>
-        <p className="mt-6 text-base text-ink-faint">{personality.line2}</p>
+        <p className="mt-6 text-base text-ink-faint">{t.personality.line2}</p>
       </Reveal>
     </section>
   );

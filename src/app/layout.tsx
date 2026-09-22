@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo, Fraunces, Caveat } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
+import { LanguageProvider } from "@/lib/LanguageContext";
 import "./globals.css";
 
 const sansBody = Archivo({
@@ -54,7 +55,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body className="min-h-full flex flex-col bg-bg text-ink font-sans antialiased selection:bg-accent selection:text-bg">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
+          <LanguageProvider>{children}</LanguageProvider>
         </ThemeProvider>
       </body>
     </html>

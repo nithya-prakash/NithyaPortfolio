@@ -6,8 +6,11 @@ import type { Project } from "@/lib/data";
 import Reveal from "@/components/Reveal";
 import ProjectVisual from "@/components/ProjectVisual";
 import TechIcon from "@/components/TechIcon";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
+  const { t } = useLanguage();
+
   return (
     <Reveal delay={(index % 3) * 0.06} className="h-full">
       <motion.div
@@ -66,7 +69,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                   <path d="M15 3h6v6" />
                   <path d="M10 14 21 3" />
                 </svg>
-                Live demo
+                {t.projectCard.liveDemo}
               </a>
             )}
 
@@ -78,7 +81,7 @@ export default function ProjectCard({ project, index }: { project: Project; inde
                 className="flex w-fit items-center gap-1.5 text-sm font-medium text-ink transition-colors hover:text-accent"
               >
                 <GithubIcon size={14} />
-                GitHub
+                {t.projectCard.github}
               </a>
             )}
           </div>

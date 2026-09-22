@@ -1,14 +1,18 @@
-import { education } from "@/lib/data";
+"use client";
+
 import JourneyTimeline from "@/components/JourneyTimeline";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Education() {
+  const { t } = useLanguage();
+
   return (
     <JourneyTimeline
       id="education"
-      eyebrow="Education"
-      index="03"
-      title="Where I've studied."
-      entries={education}
+      eyebrow={t.educationSection.eyebrow}
+      index={t.educationSection.index}
+      title={t.educationSection.title}
+      entries={t.education}
     />
   );
 }

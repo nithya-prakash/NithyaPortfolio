@@ -1,19 +1,27 @@
+"use client";
+
 import { ArrowUpRight, FileText } from "lucide-react";
-import { publications } from "@/lib/data";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
 import TechIcon from "@/components/TechIcon";
+import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Publications() {
+  const { t } = useLanguage();
+
   return (
     <section
       id="publications"
       className="snap-page container-px mx-auto flex min-h-screen max-w-6xl flex-col justify-center py-20 sm:py-28 lg:h-screen lg:snap-start lg:py-0"
     >
-      <SectionHeading eyebrow="Research" index="05" title="Published work." />
+      <SectionHeading
+        eyebrow={t.publicationsSection.eyebrow}
+        index={t.publicationsSection.index}
+        title={t.publicationsSection.title}
+      />
 
       <div className="space-y-4">
-        {publications.map((pub) => (
+        {t.publications.map((pub) => (
           <Reveal key={pub.title}>
             <a
               href={pub.href}
@@ -49,7 +57,7 @@ export default function Publications() {
                 </div>
               </div>
               <span className="mt-0.5 flex shrink-0 items-center gap-1.5 text-sm font-medium text-ink-faint transition-colors group-hover:text-accent">
-                Read Paper
+                {t.publicationsSection.readPaper}
                 <ArrowUpRight
                   size={18}
                   className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
