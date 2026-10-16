@@ -32,14 +32,14 @@ export default function Image() {
           </div>
         </div>
         <svg width="360" height="360" viewBox="0 0 64 64">
-          <path d="M32 3C40 3 46 14 46 26c0 4 5 8 5 16 0 12-8 19-19 19S13 54 13 42c0-8 5-12 5-16C18 14 24 3 32 3z" fill="#4c7a2e" />
-          <path d="M32 8c6 0 10 9 10 19 0 4 5 8 5 15 0 9-6 15-15 15S17 51 17 42c0-7 5-11 5-15C22 17 26 8 32 8z" fill="#cfe86a" />
-          <circle cx="32" cy="42" r="10" fill="#9a6532" />
-          <circle cx="28.3" cy="40.5" r="1.4" fill="#2b1a0e" />
-          <circle cx="35.7" cy="40.5" r="1.4" fill="#2b1a0e" />
-          <path d="M29.2 44c1.6 2 4 2 5.6 0" fill="none" stroke="#2b1a0e" strokeWidth="1.4" strokeLinecap="round" />
-          <circle cx="25.8" cy="44" r="1.8" fill="#f2a0b4" />
-          <circle cx="38.2" cy="44" r="1.8" fill="#f2a0b4" />
+          <g fill="none" stroke="#c4b5fd" strokeWidth="3" strokeLinecap="round">
+            <path d="M23 9c-3 3 3 5 0 9" />
+            <path d="M32 7c-3 3 3 5 0 9" />
+            <path d="M41 9c-3 3 3 5 0 9" />
+          </g>
+          <path d="M13 24h32v14a13 13 0 0 1-13 13h-6a13 13 0 0 1-13-13V24z" fill="#3a1a2e" stroke="#f472b6" strokeWidth="3.5" strokeLinejoin="round" />
+          <path d="M45 28h3a7 7 0 0 1 0 14h-4" fill="none" stroke="#f472b6" strokeWidth="3.5" strokeLinecap="round" />
+          <path d="M29 44c-6-4-9-7-9-10a4.5 4.5 0 0 1 9-1 4.5 4.5 0 0 1 9 1c0 3-3 6-9 10z" fill="#f472b6" />
         </svg>
       </div>
     ),
