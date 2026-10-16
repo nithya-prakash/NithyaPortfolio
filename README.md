@@ -14,7 +14,7 @@ Personal portfolio of an AI engineer (RAG, LLM agents, MLOps). The idea is evide
 
 - Next.js 16 (App Router) and TypeScript
 - Tailwind CSS v4, `next-themes` for light and dark
-- Framer-free: animations are plain CSS and `IntersectionObserver`
+- Framer Motion in the contact form; other animations are plain CSS and `IntersectionObserver`
 - Contact form via [Formspree](https://formspree.io/)
 
 ## Develop
