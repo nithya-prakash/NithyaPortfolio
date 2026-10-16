@@ -13,7 +13,7 @@ export default function ThemeToggle() {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) {
-    return <div className="h-9 w-9 rounded-full border border-line" aria-hidden />;
+    return <div className="h-9 w-9 rounded-full border border-line-strong" aria-hidden />;
   }
 
   const isDark = resolvedTheme === "dark";
@@ -23,9 +23,10 @@ export default function ThemeToggle() {
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       aria-label={isDark ? t.themeToggle.switchToLight : t.themeToggle.switchToDark}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
+      title={isDark ? t.themeToggle.switchToLight : t.themeToggle.switchToDark}
+      className="flex h-9 w-9 items-center justify-center rounded-full border border-line-strong bg-surface text-accent transition-colors hover:border-accent hover:bg-accent-soft"
     >
-      {isDark ? <Sun size={15} /> : <Moon size={15} />}
+      {isDark ? <Sun size={17} /> : <Moon size={17} />}
     </button>
   );
 }

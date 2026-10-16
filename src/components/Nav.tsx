@@ -1,5 +1,6 @@
 "use client";
 
+import { Download } from "lucide-react";
 import LanguageToggle from "@/components/LanguageToggle";
 import ThemeToggle from "@/components/ThemeToggle";
 import { useLanguage } from "@/lib/LanguageContext";
@@ -32,13 +33,14 @@ export default function Nav() {
             </li>
           ))}
         </ul>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 sm:gap-3">
           <a
             href={t.profile.resumeHref}
             target="_blank"
             rel="noreferrer"
-            className="hidden rounded-full border border-line px-3 py-1.5 font-mono text-xs text-ink-soft transition-colors hover:border-accent hover:text-accent sm:block"
+            className="flex h-9 items-center gap-1.5 rounded-full bg-accent px-3.5 text-xs font-semibold text-bg transition-transform hover:-translate-y-0.5 sm:px-4"
           >
+            <Download size={14} aria-hidden />
             {ui[lang].resume}
           </a>
           <LanguageToggle />

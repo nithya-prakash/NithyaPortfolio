@@ -4,16 +4,35 @@ import { useLanguage } from "@/lib/LanguageContext";
 
 export default function LanguageToggle() {
   const { lang, setLang } = useLanguage();
-  const next = lang === "en" ? "de" : "en";
+  const options = [
+    { code: "en", label: "EN", name: "English" },
+    { code: "de", label: "DE", name: "Deutsch" },
+  ] as const;
 
   return (
-    <button
-      type="button"
-      onClick={() => setLang(next)}
-      aria-label={lang === "en" ? "Zu Deutsch wechseln" : "Switch to English"}
-      className="flex h-9 min-w-9 items-center justify-center rounded-full border border-line px-2.5 text-xs font-semibold uppercase tracking-wide text-ink-soft transition-colors hover:border-accent hover:text-accent"
+    <div
+      role="group"
+      aria-label="Language"
+      className="flex h-9 items-center rounded-full border border-line-strong bg-surface p-0.5 font-mono text-xs"
     >
-      {lang === "en" ? "DE" : "EN"}
-    </button>
+      {options.map((o) => {
+        const active = lang === o.code;
+        return (
+          <button
+            key={o.code}
+            type="button"
+            onClick={() => setLang(o.code)}
+            aria-pressed={active}
+            aria-label={o.name}
+            title={o.name}
+            className={`h-full rounded-full px-2.5 font-semibold transition-colors ${
+              active ? "bg-accent text-bg" : "text-ink-soft hover:text-accent"
+            }`}
+          >
+            {o.label}
+          </button>
+        );
+      })}
+    </div>
   );
 }
