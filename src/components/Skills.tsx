@@ -1,51 +1,36 @@
 "use client";
 
-import Reveal, { StaggerGroup, staggerItem } from "@/components/Reveal";
-import SectionHeading from "@/components/SectionHeading";
-import { motion } from "framer-motion";
-import Marquee from "@/components/Marquee";
-import TechIcon from "@/components/TechIcon";
+import SectionLabel from "@/components/SectionLabel";
 import { useLanguage } from "@/lib/LanguageContext";
+import Marquee from "@/components/Marquee";
+import { ui } from "@/lib/work";
 
 export default function Skills() {
-  const { t } = useLanguage();
-  const allSkills = Array.from(new Set(t.skills.flatMap((g) => g.items)));
+  const { lang, t } = useLanguage();
 
+  const all = Array.from(new Set(t.skills.flatMap((g) => g.items)));
+  const half = Math.ceil(all.length / 2);
   return (
-    <section
-      id="skills"
-      className="snap-page flex min-h-screen flex-col justify-center py-20 sm:py-28 lg:h-screen lg:snap-start lg:py-0"
-    >
-      <div className="container-px mx-auto max-w-6xl">
-        <SectionHeading
-          eyebrow={t.skillsSection.eyebrow}
-          index={t.skillsSection.index}
-          title={t.skillsSection.title}
-        />
-
-        <StaggerGroup className="grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
-          {t.skills.map((group) => (
-            <motion.div key={group.category} variants={staggerItem}>
-              <h3 className="text-xs uppercase tracking-[0.2em] text-ink-faint">{group.category}</h3>
-              <div className="mt-3 flex flex-wrap gap-1.5">
-                {group.items.map((item) => (
-                  <span
-                    key={item}
-                    className="flex items-center gap-1.5 rounded-full border border-line px-2.5 py-1 text-xs text-ink"
-                  >
-                    <TechIcon name={item} size={12} className="shrink-0 text-ink-soft" />
-                    {item}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </StaggerGroup>
+    <section id="skills" className="container-px mx-auto max-w-6xl py-16 sm:py-24">
+      <SectionLabel emoji="🛠️" label={ui[lang].skillsLabel} title={t.skillsSection.title} />
+      <div className="-mx-5 mb-12 flex flex-col gap-3 sm:-mx-10">
+        <Marquee items={all.slice(0, half)} />
+        <Marquee items={all.slice(half)} reverse />
       </div>
-
-      <Reveal delay={0.1} className="mt-10">
-        <Marquee items={allSkills} />
-      </Reveal>
+      <div className="grid gap-x-10 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">
+        {t.skills.map((g) => (
+          <div key={g.category}>
+            <h3 className="font-mono text-xs uppercase tracking-[0.15em] text-ink-faint">{g.category}</h3>
+            <div className="mt-3 flex flex-wrap gap-1.5">
+              {g.items.map((item) => (
+                <span key={item} className="rounded-full border border-line bg-surface px-3 py-1 text-xs text-ink">
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

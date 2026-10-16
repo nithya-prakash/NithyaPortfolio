@@ -1,150 +1,83 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
-import HeroCircles from "@/components/HeroCircles";
+import { useState } from "react";
+import CoffeeCup from "@/components/CoffeeCup";
 import { useLanguage } from "@/lib/LanguageContext";
+import { ui } from "@/lib/work";
 
-const container = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
-};
-
-const item = {
-  hidden: { opacity: 0, y: 24 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const } },
-};
+const tags = ["RAG", "LLM agents", "MCP", "MLOps", "Computer vision", "Time series"];
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
+  const u = ui[lang];
+  const [purr, setPurr] = useState(0);
+  const meows = ["mrrp ☕", "purr…", "feed me after the demo", "mew!"];
 
   return (
-    <section
-      id="top"
-      className="snap-page relative flex min-h-screen flex-col justify-center overflow-hidden pt-28 pb-16 sm:pt-32 lg:h-screen lg:snap-start lg:py-0"
-    >
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -right-32 top-0 h-[28rem] w-[28rem] rounded-full opacity-[0.14] blur-[110px]"
-        style={{ background: "var(--accent)" }}
-      />
+    <section id="top" className="relative overflow-hidden">
+      <div className="dots pointer-events-none absolute inset-0 opacity-30" aria-hidden />
+      <div className="glow-pink pointer-events-none absolute -left-24 top-10 h-96 w-96 rounded-full" aria-hidden />
+      <div className="glow-lilac pointer-events-none absolute -right-24 top-40 h-[28rem] w-[28rem] rounded-full" aria-hidden />
 
-      <HeroCircles />
+      <div className="container-px relative mx-auto grid max-w-6xl items-center gap-10 pt-32 pb-20 sm:pt-40 sm:pb-28 lg:grid-cols-[1.3fr_0.7fr]">
+        <div>
+          <p className="font-mono text-sm text-accent">✦ $ whoami</p>
+          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-6xl">{t.profile.name}</h1>
+          <p className="cursor mt-5 max-w-3xl text-balance text-2xl font-medium text-ink sm:text-3xl">{u.headline}</p>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-soft sm:text-lg">{u.sub}</p>
 
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={container}
-        className="container-px relative mx-auto max-w-6xl"
-      >
-        <motion.p
-          variants={item}
-          className="font-script text-2xl text-accent sm:text-3xl"
-        >
-          {t.hero.greeting}
-        </motion.p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {tags.map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full border border-line-strong bg-surface px-3 py-1 font-mono text-xs text-info"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
 
-        <motion.h1
-          variants={item}
-          className="mt-3 text-balance font-serif text-[13vw] font-medium leading-[0.98] tracking-tight text-ink sm:text-6xl lg:text-7xl"
-        >
-          {t.hero.name}
-        </motion.h1>
+          <p className="mt-8 inline-flex items-center gap-2 font-mono text-xs text-ink-soft">
+            <span className="h-2 w-2 rounded-full bg-accent" aria-hidden />
+            {u.status}
+          </p>
 
-        <motion.h2
-          variants={item}
-          className="mt-4 max-w-3xl text-balance text-2xl font-semibold leading-tight tracking-tight text-ink sm:text-3xl lg:text-4xl"
-        >
-          {t.hero.tagline}
-        </motion.h2>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a
+              href="#work"
+              className="rounded-full bg-accent px-6 py-2.5 text-sm font-medium text-bg transition-transform hover:-translate-y-0.5"
+            >
+              {u.ctaWork}
+            </a>
+            <a
+              href="#contact"
+              className="rounded-full border border-line-strong px-6 py-2.5 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
+            >
+              {u.ctaContact}
+            </a>
+          </div>
+        </div>
 
-        <motion.p
-          variants={item}
-          className="mt-6 max-w-xl text-base leading-relaxed text-ink-soft sm:text-lg"
-        >
-          {t.profile.heroSupport}
-        </motion.p>
-
-        <motion.div
-          variants={item}
-          className="mt-7 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-ink-soft"
-        >
-          {t.heroFacts.map((fact, i) => (
-            <span key={fact} className="flex items-center gap-2">
-              {i !== 0 && <span className="h-1 w-1 rounded-full bg-ink-faint" aria-hidden />}
-              {fact}
+        <div className="relative mx-auto hidden w-full max-w-xs lg:block">
+          <CoffeeCup className="w-full" />
+          <button
+            type="button"
+            onClick={() => setPurr((n) => n + 1)}
+            aria-label="Pet the cat"
+            className="bob absolute -bottom-2 -right-4 text-5xl transition-transform hover:scale-110"
+          >
+            🐱
+          </button>
+          {purr > 0 && (
+            <span
+              key={purr}
+              className="pop-note absolute -right-10 -top-0 rounded-2xl border border-line-strong bg-surface px-3 py-1.5 font-mono text-xs text-ink"
+            >
+              {meows[purr % meows.length]}
             </span>
-          ))}
-        </motion.div>
-
-        <motion.div variants={item} className="mt-10 flex flex-wrap items-center gap-4">
-          <a
-            href="#projects"
-            className="group inline-flex items-center gap-2 rounded-full bg-accent px-6 py-3 text-sm font-medium text-bg transition-transform hover:-translate-y-0.5"
-          >
-            {t.hero.viewProjects}
-            <ArrowUpRight size={16} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-          <a
-            href="#contact"
-            className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
-          >
-            {t.hero.connect}
-          </a>
-          <a
-            href={t.profile.resumeHref}
-            download
-            className="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium text-ink transition-colors hover:border-accent hover:text-accent"
-          >
-            {t.hero.downloadResume}
-          </a>
-        </motion.div>
-
-        <motion.div variants={item} className="mt-8 flex items-center gap-4">
-          <a
-            href={t.profile.github}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="GitHub"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
-          >
-            <GithubIcon size={17} />
-          </a>
-          <a
-            href={t.profile.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="LinkedIn"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-line text-ink-soft transition-colors hover:border-accent hover:text-accent"
-          >
-            <LinkedinIcon size={17} />
-          </a>
-        </motion.div>
-
-        <motion.p
-          variants={item}
-          className="mt-8 font-script text-xl text-ink-faint sm:mt-10 sm:text-2xl"
-        >
-          {t.profile.signature}
-        </motion.p>
-      </motion.div>
-
-      <motion.a
-        href="#about"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.6 }}
-        className="absolute inset-x-0 bottom-6 mx-auto flex w-fit items-center gap-2 text-xs uppercase tracking-[0.2em] text-ink-faint transition-colors hover:text-accent sm:bottom-8"
-      >
-        {t.hero.scroll}
-        <motion.span
-          animate={{ y: [0, 5, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ArrowDown size={14} />
-        </motion.span>
-      </motion.a>
+          )}
+        </div>
+      </div>
     </section>
   );
 }

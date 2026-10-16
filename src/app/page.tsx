@@ -1,29 +1,37 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
-import Projects from "@/components/Projects";
-import Education from "@/components/Education";
-import Experience from "@/components/Experience";
-import Publications from "@/components/Publications";
+import FlagshipWork from "@/components/FlagshipWork";
+import OtherWork from "@/components/OtherWork";
+import Approach from "@/components/Approach";
+import CoffeeBreak from "@/components/CoffeeBreak";
+import { Education, Research, Experience } from "@/components/Journey";
 import Skills from "@/components/Skills";
-import Personality from "@/components/Personality";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Aside from "@/components/Aside";
+import Fx from "@/components/Fx";
+import AskPortfolio from "@/components/AskPortfolio";
 
 export default function Home() {
   return (
     <>
       <Nav />
+      <Fx />
       <main>
         <Hero />
-        <About />
-        <Projects />
+        <FlagshipWork />
+        <Aside i={0} />
+        <OtherWork />
+        <AskPortfolio />
+        <CoffeeBreak />
+        <Approach />
         <Education />
+        <Research />
         <Experience />
-        <Publications />
+        <Aside i={1} />
         <Skills />
-        <Personality />
         <Contact />
+        <Aside i={2} />
       </main>
       <Footer />
     </>

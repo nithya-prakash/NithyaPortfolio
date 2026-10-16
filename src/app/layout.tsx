@@ -1,26 +1,17 @@
 import type { Metadata } from "next";
-import { Archivo, Fraunces, Caveat } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import "./globals.css";
 
-const sansBody = Archivo({
+const sansBody = Inter({
   variable: "--font-sans-body",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
 });
 
-const serifDisplay = Fraunces({
-  variable: "--font-serif-display",
+const monoCode = JetBrains_Mono({
+  variable: "--font-mono-code",
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  weight: ["400", "500", "600"],
-});
-
-const scriptAccent = Caveat({
-  variable: "--font-script-accent",
-  subsets: ["latin"],
-  weight: ["500", "600"],
 });
 
 const siteUrl = "https://nithya-prakash.dev";
@@ -29,11 +20,11 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "Nithya Madalakote Prakash — AI Engineer",
   description:
-    "AI Engineer building production-ready Generative AI, RAG, ML and intelligent software systems.",
+    "AI engineer building RAG, agent and ML systems, each with tests, evaluation numbers and honest limits.",
   openGraph: {
     title: "Nithya Madalakote Prakash — AI Engineer",
     description:
-      "AI Engineer building production-ready Generative AI, RAG, ML and intelligent software systems.",
+      "AI engineer building RAG, agent and ML systems, each with tests, evaluation numbers and honest limits.",
     url: siteUrl,
     siteName: "Nithya Madalakote Prakash",
     type: "website",
@@ -42,7 +33,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Nithya Madalakote Prakash — AI Engineer",
     description:
-      "AI Engineer building production-ready Generative AI, RAG, ML and intelligent software systems.",
+      "AI engineer building RAG, agent and ML systems, each with tests, evaluation numbers and honest limits.",
   },
 };
 
@@ -51,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${sansBody.variable} ${serifDisplay.variable} ${scriptAccent.variable} h-full`}
+      className={`${sansBody.variable} ${monoCode.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-bg text-ink font-sans antialiased selection:bg-accent selection:text-bg">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>

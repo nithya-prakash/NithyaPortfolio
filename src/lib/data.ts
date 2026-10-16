@@ -1,16 +1,5 @@
 export type Lang = "en" | "de";
 
-export type Project = {
-  number: string;
-  slug: string;
-  name: string;
-  description: string;
-  stack: string[];
-  highlights: string[];
-  github?: string;
-  demo?: string;
-};
-
 export type JourneyEntry = {
   period: string;
   title: string;
@@ -86,16 +75,6 @@ export type LocaleContent = {
     careAboutLabel: string;
     values: string[];
   };
-  projectsSection: {
-    eyebrow: string;
-    index: string;
-    title: string;
-  };
-  projects: Project[];
-  projectCard: {
-    liveDemo: string;
-    github: string;
-  };
   educationSection: {
     eyebrow: string;
     index: string;
@@ -121,10 +100,6 @@ export type LocaleContent = {
     title: string;
   };
   skills: SkillGroup[];
-  personality: {
-    line1: string;
-    line2: string;
-  };
   contactSection: {
     eyebrow: string;
     index: string;
@@ -155,216 +130,6 @@ export type LocaleContent = {
     switchToDark: string;
   };
 };
-
-const projectsEn: Project[] = [
-  {
-    number: "01",
-    slug: "rag-knowledge-assistant",
-    name: "Production RAG Knowledge Assistant",
-    description:
-      "A production-oriented enterprise knowledge assistant using Retrieval-Augmented Generation to answer questions over private documents with grounded responses and citations.",
-    stack: ["Python", "FastAPI", "Next.js", "Qdrant", "PostgreSQL", "Redis", "Celery", "Docker", "LLMs", "Embeddings"],
-    highlights: [
-      "Hybrid retrieval combining semantic search and BM25",
-      "Reranking and citation-aware generation",
-      "Background document processing with evaluation and local LLM support",
-      "Production-grade architecture end to end",
-    ],
-    github: "https://github.com/nithya-prakash/HybridRAG",
-    demo: "https://hybridrag-nithya-prakash.vercel.app",
-  },
-  {
-    number: "02",
-    slug: "predictive-maintenance-ai",
-    name: "Predictive Maintenance & Anomaly Detection Platform",
-    description:
-      "An industrial AI platform for detecting abnormal machine behavior and supporting predictive maintenance workflows.",
-    stack: ["Python", "FastAPI", "PyTorch", "scikit-learn", "PostgreSQL", "Docker", "Time-series ML"],
-    highlights: [
-      "Sensor data processing and predictive modeling",
-      "Anomaly detection with machine health monitoring",
-      "Alerting and automated data pipelines",
-      "Industrial AI, built for real telemetry",
-    ],
-    github: "https://github.com/nithya-prakash/PredictiveMaintenanceAI",
-  },
-  {
-    number: "03",
-    slug: "industrial-ai-copilot",
-    name: "Industrial Multimodal AI Copilot",
-    description:
-      "An evidence-based diagnostic copilot for manufacturing technicians: combines a technician's question, a component photo, sensor readings, and technical manuals into a structured, cited diagnosis with confidence scoring and human-in-the-loop approval for high-risk cases.",
-    stack: ["Python", "FastAPI", "Celery", "PostgreSQL", "Qdrant", "Docker", "Prometheus"],
-    highlights: [
-      "Multimodal pipeline fusing RAG over manuals, computer vision, and live sensor analytics",
-      "Agentic orchestration with confidence scoring and human-in-the-loop approval",
-      "Built and verified phase-by-phase against real Postgres/Qdrant/Docker infrastructure",
-    ],
-    github: "https://github.com/nithya-prakash/IndustrialAICopilot",
-  },
-  {
-    number: "04",
-    slug: "sipmate-hydra",
-    name: "SipMate / Hydra",
-    description:
-      "A macOS desktop hydration assistant that combines a playful interface with local data storage and ML-based scheduling logic.",
-    stack: ["Python", "PySide6", "PyObjC", "SQLite", "scikit-learn", "macOS"],
-    highlights: [
-      "Native macOS integration with procedural characters",
-      "Custom desktop UI built with PySide6",
-      "Local persistence with SQLite",
-      "ML-based reminder scheduling",
-    ],
-    github: "https://github.com/nithya-prakash/SipmateAssistant",
-  },
-  {
-    number: "05",
-    slug: "deutschai",
-    name: "DeutschAI",
-    description:
-      "An AI-powered, adaptive platform for learning German from A1 to C1, architected so additional languages can be added later without reworking the core.",
-    stack: ["Python", "FastAPI", "Next.js", "LLM Tutor Agent"],
-    highlights: [
-      "Spaced-repetition learning engine paired with a retrieval-grounded AI tutor",
-      "Local speech and conversation practice engine",
-      "ML-driven analytics and recommendations across the learning journey",
-    ],
-    github: "https://github.com/nithya-prakash/DeutschAI",
-  },
-  {
-    number: "06",
-    slug: "greengrid-optimizer",
-    name: "GreenGrid Optimizer",
-    description:
-      "An end-to-end ML application forecasting renewable energy generation across Germany using public datasets.",
-    stack: ["Python", "Machine Learning", "Time Series Forecasting"],
-    highlights: [
-      "Time-series forecasting pipeline over public renewable-energy data",
-      "End-to-end workflow from data ingestion to model output",
-    ],
-    github: "https://github.com/nithya-prakash/GreenGridOptimizer",
-  },
-  {
-    number: "07",
-    slug: "indusense",
-    name: "InduSense",
-    description:
-      "A production-grade, event-driven monitoring platform for multi-factory industrial operations: ingests real-time sensor telemetry, detects anomalies, and manages alerts and incidents through a distributed microservices architecture.",
-    stack: ["Python", "FastAPI", "Kafka", "MQTT", "InfluxDB", "Redis", "PostgreSQL", "Next.js", "Docker", "Kubernetes"],
-    highlights: [
-      "Five containerized microservices (API, ingestion, stream processing, anomaly detection, alerting) built with FastAPI",
-      "Real-time telemetry from 1000+ simulated sensors via MQTT, processed through Kafka",
-      "Statistical and ML-based anomaly detection (Isolation Forest) with alert deduplication and incident audit trails",
-      "Full observability stack (Prometheus, Grafana, Jaeger) and a Next.js dashboard for live alerts and telemetry",
-    ],
-    github: "https://github.com/nithya-prakash/InduSense",
-  },
-];
-
-const projectsDe: Project[] = [
-  {
-    number: "01",
-    slug: "rag-knowledge-assistant",
-    name: "Production RAG Knowledge Assistant",
-    description:
-      "Ein produktionsreifer Enterprise-Wissensassistent, der mittels Retrieval-Augmented Generation Fragen zu privaten Dokumenten beantwortet — mit belegten Antworten und Quellenangaben.",
-    stack: ["Python", "FastAPI", "Next.js", "Qdrant", "PostgreSQL", "Redis", "Celery", "Docker", "LLMs", "Embeddings"],
-    highlights: [
-      "Hybrid-Retrieval aus semantischer Suche und BM25",
-      "Reranking und quellenbewusste Antwortgenerierung",
-      "Hintergrund-Dokumentenverarbeitung mit Evaluation und lokalem LLM-Support",
-      "Durchgängig produktionsreife Architektur",
-    ],
-    github: "https://github.com/nithya-prakash/HybridRAG",
-    demo: "https://hybridrag-nithya-prakash.vercel.app",
-  },
-  {
-    number: "02",
-    slug: "predictive-maintenance-ai",
-    name: "Predictive Maintenance & Anomaly Detection Platform",
-    description:
-      "Eine industrielle KI-Plattform zur Erkennung von abnormalem Maschinenverhalten, die vorausschauende Wartungsprozesse unterstützt.",
-    stack: ["Python", "FastAPI", "PyTorch", "scikit-learn", "PostgreSQL", "Docker", "Time-series ML"],
-    highlights: [
-      "Sensordatenverarbeitung und prädiktive Modellierung",
-      "Anomalieerkennung mit Maschinenzustandsüberwachung",
-      "Alarmierung und automatisierte Datenpipelines",
-      "Industrielle KI, gebaut für echte Telemetriedaten",
-    ],
-    github: "https://github.com/nithya-prakash/PredictiveMaintenanceAI",
-  },
-  {
-    number: "03",
-    slug: "industrial-ai-copilot",
-    name: "Industrial Multimodal AI Copilot",
-    description:
-      "Ein evidenzbasierter Diagnose-Copilot für Techniker in der Fertigung: kombiniert die Frage eines Technikers, ein Foto der Komponente, Sensordaten und technische Handbücher zu einer strukturierten, belegten Diagnose mit Konfidenzbewertung und Human-in-the-Loop-Freigabe für kritische Fälle.",
-    stack: ["Python", "FastAPI", "Celery", "PostgreSQL", "Qdrant", "Docker", "Prometheus"],
-    highlights: [
-      "Multimodale Pipeline aus RAG über Handbücher, Computer Vision und Live-Sensoranalyse",
-      "Agentenbasierte Orchestrierung mit Konfidenzbewertung und Human-in-the-Loop-Freigabe",
-      "Phasenweise aufgebaut und gegen echte Postgres/Qdrant/Docker-Infrastruktur verifiziert",
-    ],
-    github: "https://github.com/nithya-prakash/IndustrialAICopilot",
-  },
-  {
-    number: "04",
-    slug: "sipmate-hydra",
-    name: "SipMate / Hydra",
-    description:
-      "Ein macOS-Desktop-Assistent fürs Trinken, der eine verspielte Oberfläche mit lokaler Datenspeicherung und ML-basierter Zeitplanlogik verbindet.",
-    stack: ["Python", "PySide6", "PyObjC", "SQLite", "scikit-learn", "macOS"],
-    highlights: [
-      "Native macOS-Integration mit prozeduralen Charakteren",
-      "Eigene Desktop-Oberfläche, gebaut mit PySide6",
-      "Lokale Datenspeicherung mit SQLite",
-      "ML-basierte Erinnerungsplanung",
-    ],
-    github: "https://github.com/nithya-prakash/SipmateAssistant",
-  },
-  {
-    number: "05",
-    slug: "deutschai",
-    name: "DeutschAI",
-    description:
-      "Eine KI-gestützte, adaptive Plattform zum Deutschlernen von A1 bis C1, so konzipiert, dass weitere Sprachen später ergänzt werden können, ohne den Kern umzubauen.",
-    stack: ["Python", "FastAPI", "Next.js", "LLM Tutor Agent"],
-    highlights: [
-      "Spaced-Repetition-Lernmotor gepaart mit einem retrieval-gestützten KI-Tutor",
-      "Lokale Sprach- und Konversationsübungsengine",
-      "ML-gestützte Analysen und Empfehlungen über den gesamten Lernverlauf",
-    ],
-    github: "https://github.com/nithya-prakash/DeutschAI",
-  },
-  {
-    number: "06",
-    slug: "greengrid-optimizer",
-    name: "GreenGrid Optimizer",
-    description:
-      "Eine durchgängige ML-Anwendung zur Prognose der Erzeugung erneuerbarer Energien in Deutschland anhand öffentlicher Datensätze.",
-    stack: ["Python", "Machine Learning", "Time Series Forecasting"],
-    highlights: [
-      "Zeitreihen-Prognosepipeline auf Basis öffentlicher Daten zu erneuerbaren Energien",
-      "Durchgängiger Workflow von der Datenaufnahme bis zur Modellausgabe",
-    ],
-    github: "https://github.com/nithya-prakash/GreenGridOptimizer",
-  },
-  {
-    number: "07",
-    slug: "indusense",
-    name: "InduSense",
-    description:
-      "Eine produktionsreife, ereignisgesteuerte Monitoring-Plattform für Industriebetriebe mit mehreren Standorten: erfasst Sensortelemetrie in Echtzeit, erkennt Anomalien und verwaltet Alarme und Vorfälle über eine verteilte Microservices-Architektur.",
-    stack: ["Python", "FastAPI", "Kafka", "MQTT", "InfluxDB", "Redis", "PostgreSQL", "Next.js", "Docker", "Kubernetes"],
-    highlights: [
-      "Fünf containerisierte Microservices (API, Ingestion, Stream-Verarbeitung, Anomalieerkennung, Alarmierung) mit FastAPI",
-      "Echtzeit-Telemetrie von 1000+ simulierten Sensoren via MQTT, verarbeitet über Kafka",
-      "Statistische und ML-basierte Anomalieerkennung (Isolation Forest) mit Alarm-Deduplizierung und Vorfalls-Audit-Trails",
-      "Vollständiger Observability-Stack (Prometheus, Grafana, Jaeger) und ein Next.js-Dashboard für Live-Alarme und Telemetrie",
-    ],
-    github: "https://github.com/nithya-prakash/InduSense",
-  },
-];
 
 const educationEn: JourneyEntry[] = [
   {
@@ -406,14 +171,6 @@ const educationDe: JourneyEntry[] = [
 
 const experienceEn: JourneyEntry[] = [
   {
-    period: "Jun 2024 — Jan 2025",
-    title: "Java Full Stack Developer Trainee",
-    place: "Palle Technologies, Bengaluru, India",
-    description:
-      "Completed a structured 6-month full stack development programme, gaining experience in Java, Spring Boot, MySQL, and responsive front-end development. Built and tested REST APIs and integrated front-end and back-end components for internal web applications. Demonstrated strong problem-solving, code review participation, and team collaboration across the SDLC.",
-    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack"],
-  },
-  {
     period: "Currently",
     title: "Building",
     place: "Independent projects",
@@ -422,17 +179,25 @@ const experienceEn: JourneyEntry[] = [
     tags: ["RAG", "AI Agents", "Backend Systems"],
     current: true,
   },
+  {
+    period: "Mar 2025 — Apr 2025",
+    title: "Data Science Intern",
+    place: "LaunchED Global, Remote (Bengaluru, India)",
+    description:
+      "Two-month internship on data science workflows: data analysis, preprocessing, and extracting insights from data with Python and NumPy.",
+    tags: ["Python", "NumPy", "Data Analysis", "Preprocessing"],
+  },
+  {
+    period: "Jul 2024 — Jan 2025",
+    title: "Java Full Stack Developer Trainee",
+    place: "Palle Technologies, Bengaluru, India",
+    description:
+      "Completed a structured full stack development programme, gaining experience in Java, Spring Boot, MySQL, and responsive front-end development. Built and tested REST APIs and integrated front-end and back-end components for internal web applications. Demonstrated strong problem-solving, code review participation, and team collaboration across the SDLC.",
+    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack"],
+  },
 ];
 
 const experienceDe: JourneyEntry[] = [
-  {
-    period: "Jun 2024 — Jan 2025",
-    title: "Java Full Stack Developer Trainee",
-    place: "Palle Technologies, Bengaluru, Indien",
-    description:
-      "Strukturiertes 6-monatiges Full-Stack-Entwicklungsprogramm mit Erfahrung in Java, Spring Boot, MySQL und responsiver Frontend-Entwicklung. REST-APIs entwickelt und getestet sowie Frontend- und Backend-Komponenten für interne Webanwendungen integriert. Starke Problemlösungskompetenz, Beteiligung an Code-Reviews und Teamzusammenarbeit über den gesamten SDLC hinweg.",
-    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack"],
-  },
   {
     period: "Aktuell",
     title: "Im Aufbau",
@@ -441,6 +206,22 @@ const experienceDe: JourneyEntry[] = [
       "Produktionsreife KI-Systeme, RAG-Anwendungen, intelligente Backend-Systeme und KI-gestützte Produkte.",
     tags: ["RAG", "KI-Agenten", "Backend-Systeme"],
     current: true,
+  },
+  {
+    period: "Mär 2025 — Apr 2025",
+    title: "Data Science Intern",
+    place: "LaunchED Global, Remote (Bengaluru, Indien)",
+    description:
+      "Zweimonatiges Praktikum zu Data-Science-Workflows: Datenanalyse, Vorverarbeitung und Gewinnung von Erkenntnissen mit Python und NumPy.",
+    tags: ["Python", "NumPy", "Datenanalyse", "Vorverarbeitung"],
+  },
+  {
+    period: "Jul 2024 — Jan 2025",
+    title: "Java Full Stack Developer Trainee",
+    place: "Palle Technologies, Bengaluru, Indien",
+    description:
+      "Strukturiertes Full-Stack-Entwicklungsprogramm mit Erfahrung in Java, Spring Boot, MySQL und responsiver Frontend-Entwicklung. REST-APIs entwickelt und getestet sowie Frontend- und Backend-Komponenten für interne Webanwendungen integriert. Starke Problemlösungskompetenz, Beteiligung an Code-Reviews und Teamzusammenarbeit über den gesamten SDLC hinweg.",
+    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack"],
   },
 ];
 
@@ -591,9 +372,6 @@ export const content: Record<Lang, LocaleContent> = {
       careAboutLabel: "What I care about",
       values: ["Reliability", "Evaluation", "Scalability", "Observability", "Production engineering", "Clean architecture"],
     },
-    projectsSection: { eyebrow: "Selected Work", index: "02", title: "Things I've built end to end." },
-    projects: projectsEn,
-    projectCard: { liveDemo: "Live demo", github: "GitHub" },
     educationSection: { eyebrow: "Education", index: "03", title: "Where I've studied." },
     education: educationEn,
     experienceSection: { eyebrow: "Experience", index: "04", title: "Where I've worked, what I'm building." },
@@ -602,10 +380,6 @@ export const content: Record<Lang, LocaleContent> = {
     publications: publicationsEn,
     skillsSection: { eyebrow: "Skills", index: "06", title: "Tools of the trade." },
     skills: skillsEn,
-    personality: {
-      line1: "Most of my best ideas start somewhere between a blank editor and a cup of coffee.",
-      line2: "Built with ☕️, curiosity, and an unhealthy number of experiments.",
-    },
     contactSection: { eyebrow: "Contact", index: "07" },
     contact: {
       headline: "Have an interesting problem?",
@@ -693,9 +467,6 @@ export const content: Record<Lang, LocaleContent> = {
       careAboutLabel: "Worauf ich Wert lege",
       values: ["Zuverlässigkeit", "Evaluation", "Skalierbarkeit", "Observability", "Produktionsreife", "Saubere Architektur"],
     },
-    projectsSection: { eyebrow: "Ausgewählte Arbeiten", index: "02", title: "Was ich von Anfang bis Ende gebaut habe." },
-    projects: projectsDe,
-    projectCard: { liveDemo: "Live-Demo", github: "GitHub" },
     educationSection: { eyebrow: "Ausbildung", index: "03", title: "Wo ich studiert habe." },
     education: educationDe,
     experienceSection: { eyebrow: "Erfahrung", index: "04", title: "Wo ich gearbeitet habe, was ich gerade baue." },
@@ -704,10 +475,6 @@ export const content: Record<Lang, LocaleContent> = {
     publications: publicationsDe,
     skillsSection: { eyebrow: "Skills", index: "06", title: "Werkzeuge des Handwerks." },
     skills: skillsDe,
-    personality: {
-      line1: "Die meisten meiner besten Ideen entstehen irgendwo zwischen einem leeren Editor und einer Tasse Kaffee.",
-      line2: "Entstanden mit ☕️, Neugier und einer ungesunden Anzahl an Experimenten.",
-    },
     contactSection: { eyebrow: "Kontakt", index: "07" },
     contact: {
       headline: "Ein interessantes Problem?",
