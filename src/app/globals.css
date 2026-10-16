@@ -341,3 +341,18 @@ body {
   opacity: 0.12;
   animation: twinkle 4s ease-in-out infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-duration: 110s !important;
+    animation-iteration-count: infinite !important;
+  }
+
+  .marquee-track.rev {
+    animation-duration: 130s !important;
+  }
+}
+
+.marquee-track {
+  will-change: transform;
+}
