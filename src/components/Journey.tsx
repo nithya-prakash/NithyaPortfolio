@@ -2,6 +2,7 @@
 
 import SectionLabel from "@/components/SectionLabel";
 import { useLanguage } from "@/lib/LanguageContext";
+import Aside from "@/components/Aside";
 import { ui } from "@/lib/work";
 
 export function Education() {
@@ -68,7 +69,7 @@ export function Experience() {
   const { lang, t } = useLanguage();
   const u = ui[lang];
   return (
-    <section id="experience" className="container-px mx-auto max-w-6xl py-14 sm:py-20">
+    <section id="experience" className="snap-page container-px mx-auto max-w-6xl py-14 sm:py-20">
       <SectionLabel emoji="💼" label={u.expLabel} title={u.expTitle} />
       <ol className="relative ml-2 border-l border-line-strong">
         {t.experience.map((e) => (
@@ -96,6 +97,7 @@ export function Experience() {
           </li>
         ))}
       </ol>
+      <Aside i={1} />
     </section>
   );
 }

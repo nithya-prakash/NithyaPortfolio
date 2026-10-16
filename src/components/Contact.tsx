@@ -3,6 +3,7 @@
 import { Mail } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "@/components/icons/BrandIcons";
 import ContactForm from "@/components/ContactForm";
+import Aside from "@/components/Aside";
 import { useLanguage } from "@/lib/LanguageContext";
 
 export default function Contact() {
@@ -46,6 +47,7 @@ export default function Contact() {
           <ContactForm />
         </div>
       </div>
+      <Aside i={2} />
     </section>
   );
 }

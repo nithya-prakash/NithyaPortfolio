@@ -37,7 +37,7 @@ export default function AskPortfolio() {
   const maxScore = result?.answer.kind === "answer" ? result.answer.hits[0].score : 1;
 
   return (
-    <section id="ask" className="container-px mx-auto max-w-6xl py-16 sm:py-24">
+    <section id="ask" className="snap-page container-px mx-auto max-w-6xl py-16 sm:py-24">
       <SectionLabel emoji="🔍" label={a.label} title={a.title} />
       <div
         data-reveal

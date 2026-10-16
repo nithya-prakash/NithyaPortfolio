@@ -8,7 +8,6 @@ import { Education, Research, Experience } from "@/components/Journey";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import Aside from "@/components/Aside";
 import Fx from "@/components/Fx";
 import AskPortfolio from "@/components/AskPortfolio";
 
@@ -20,20 +19,21 @@ export default function Home() {
       <main>
         <Hero />
         <FlagshipWork />
-        <Aside i={0} />
         <OtherWork />
         <AskPortfolio />
         <CoffeeBreak />
         <Approach />
-        <Education />
-        <Research />
+        <div className="snap-page">
+          <Education />
+          <Research />
+        </div>
         <Experience />
-        <Aside i={1} />
         <Skills />
-        <Contact />
-        <Aside i={2} />
+        <div className="snap-page">
+          <Contact />
+          <Footer />
+        </div>
       </main>
-      <Footer />
     </>
   );
 }

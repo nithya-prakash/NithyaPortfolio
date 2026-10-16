@@ -9,7 +9,7 @@ export default function Aside({ i }: { i: number }) {
   return (
     <p
       data-reveal
-      className="container-px mx-auto max-w-6xl py-6 text-center font-mono text-sm text-ink-faint"
+      className="mt-10 text-center font-mono text-sm text-ink-faint"
     >
       <span className="text-accent">✦</span> {list[i % list.length]} <span className="text-info">✦</span>
     </p>

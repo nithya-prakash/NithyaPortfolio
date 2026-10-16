@@ -14,7 +14,7 @@ export default function Hero() {
   const meows = ["mrrp ☕", "purr…", "feed me after the demo", "mew!"];
 
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="top" className="snap-page relative overflow-hidden">
       <div className="dots pointer-events-none absolute inset-0 opacity-30" aria-hidden />
       <div className="glow-pink pointer-events-none absolute -left-24 top-10 h-96 w-96 rounded-full" aria-hidden />
       <div className="glow-lilac pointer-events-none absolute -right-24 top-40 h-[28rem] w-[28rem] rounded-full" aria-hidden />

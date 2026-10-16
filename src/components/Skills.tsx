@@ -11,7 +11,7 @@ export default function Skills() {
   const all = Array.from(new Set(t.skills.flatMap((g) => g.items)));
   const half = Math.ceil(all.length / 2);
   return (
-    <section id="skills" className="container-px mx-auto max-w-6xl py-16 sm:py-24">
+    <section id="skills" className="snap-page container-px mx-auto max-w-6xl py-16 sm:py-24">
       <SectionLabel emoji="🛠️" label={ui[lang].skillsLabel} title={t.skillsSection.title} />
       <div className="-mx-5 mb-12 flex flex-col gap-3 sm:-mx-10">
         <Marquee items={all.slice(0, half)} />

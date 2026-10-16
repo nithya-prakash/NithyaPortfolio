@@ -253,3 +253,24 @@ body {
 .bob {
   animation: bob 2.4s ease-in-out infinite;
 }
+
+@media (min-width: 1024px) {
+  html {
+    scroll-snap-type: y mandatory;
+  }
+
+  .snap-page {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+  }
+}

@@ -11,7 +11,7 @@ export default function CoffeeBreak() {
   const quote = u.quotes[i % u.quotes.length];
 
   return (
-    <section className="container-px mx-auto max-w-6xl py-10">
+    <section className="snap-page container-px mx-auto w-full max-w-6xl py-10">
       <div data-reveal className="relative overflow-hidden rounded-3xl border border-line-strong bg-surface px-6 py-10 text-center sm:px-12">
         <div className="dots pointer-events-none absolute inset-0 opacity-40" aria-hidden />
         <p className="relative font-mono text-xs text-accent" aria-hidden>

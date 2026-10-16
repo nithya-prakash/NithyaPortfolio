@@ -10,10 +10,12 @@ export default function FlagshipWork() {
   const u = ui[lang];
 
   return (
-    <section id="work" className="container-px mx-auto max-w-6xl py-16 sm:py-24">
-      <SectionLabel emoji="✨" label={u.flagshipLabel} title={u.flagshipTitle} />
-      <div className="flex flex-col gap-10">
+    <section id="work">
+      <div>
         {flagships.map((f, i) => (
+          <div key={f.slug} className="snap-page">
+          <div className="container-px mx-auto w-full max-w-6xl py-10">
+          {i === 0 && <SectionLabel emoji="✨" label={u.flagshipLabel} title={u.flagshipTitle} />}
           <article
             key={f.slug}
             data-reveal
@@ -92,6 +94,8 @@ export default function FlagshipWork() {
               </div>
             </div>
           </article>
+          </div>
+          </div>
         ))}
       </div>
     </section>

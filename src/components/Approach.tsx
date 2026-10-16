@@ -9,7 +9,7 @@ export default function Approach() {
   const u = ui[lang];
 
   return (
-    <section id="approach" className="container-px mx-auto max-w-6xl py-16 sm:py-24">
+    <section id="approach" className="snap-page container-px mx-auto max-w-6xl py-16 sm:py-24">
       <SectionLabel emoji="🧪" label={u.howLabel} title={u.howTitle} />
       <div className="grid gap-4 md:grid-cols-3">
         {u.how.map((h, i) => (
