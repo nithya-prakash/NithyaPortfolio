@@ -227,55 +227,71 @@ const experienceDe: JourneyEntry[] = [
 
 const skillsEn: SkillGroup[] = [
   {
-    category: "AI / ML",
-    items: ["Python", "PyTorch", "scikit-learn", "Transformers", "NLP", "Computer Vision", "Machine Learning", "Deep Learning"],
+    category: "AI & LLMs",
+    items: ["LLMs", "LangGraph", "LangChain", "AI agents", "Multi-agent systems", "MCP", "Prompt engineering", "Structured LLM output", "LoRA fine-tuning", "Hugging Face Transformers", "Ollama", "Anthropic API", "OpenAI API", "Groq", "Langfuse", "RAGAS", "Hallucination guards", "Citation verification", "Whisper"],
   },
   {
-    category: "Generative AI",
-    items: ["LLMs", "RAG", "Embeddings", "Vector Search", "Hybrid Retrieval", "Reranking", "AI Agents", "Prompt Engineering", "LLM Evaluation"],
+    category: "RAG & Search",
+    items: ["RAG", "Hybrid retrieval", "BM25", "Dense embeddings", "Sentence-Transformers", "Cross-encoder reranking", "RRF", "Qdrant", "Neo4j", "Vector search", "Retrieval evals (Recall@k, MRR)", "PDF parsing"],
   },
   {
-    category: "Backend",
-    items: ["Python", "FastAPI", "REST APIs", "PostgreSQL", "Redis", "Celery"],
+    category: "ML & Deep Learning",
+    items: ["PyTorch", "scikit-learn", "XGBoost", "Prophet", "SHAP", "Optuna", "Time-series forecasting", "Anomaly detection", "Isolation Forest", "Computer vision", "OpenCV", "torchvision", "Grad-CAM", "Graph neural networks", "Reinforcement learning (PPO)", "Stable-Baselines3", "OR-Tools", "ONNX Runtime"],
   },
   {
-    category: "Infrastructure",
-    items: ["Docker", "Git", "GitHub", "Linux", "CI/CD", "MLOps"],
+    category: "Languages & Data",
+    items: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "C++", "Bash", "pandas", "NumPy", "SciPy", "DuckDB", "PyArrow", "Pandera", "dbt", "PostgreSQL", "InfluxDB", "SQLite", "Power BI-ready exports"],
   },
   {
-    category: "Frontend",
-    items: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    category: "Backend & APIs",
+    items: ["FastAPI", "Spring Boot", "REST APIs", "Pydantic", "SQLAlchemy", "Alembic", "Flyway", "Celery", "Redis", "Kafka", "MQTT", "WebSockets", "JWT auth", "Rate limiting", "Event-driven design", "Microservices", "MinIO"],
   },
   {
-    category: "Databases / Data",
-    items: ["PostgreSQL", "Qdrant", "SQLite", "SQL"],
+    category: "DevOps & MLOps",
+    items: ["Docker", "Docker Compose", "Kubernetes", "Helm", "GitHub Actions CI/CD", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "MLflow", "Prefect", "Model registry", "Canary rollout and rollback", "Drift detection", "Linux", "Git"],
+  },
+  {
+    category: "Testing & Quality",
+    items: ["pytest", "Vitest", "Playwright", "Testing Library", "Hypothesis", "Locust", "k6", "Load testing", "Integration tests", "ruff", "mypy", "ESLint", "Coverage reports", "Dependency audits", "Evaluation harnesses"],
+  },
+  {
+    category: "Frontend & UI/UX",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Streamlit", "Recharts", "React Query", "Framer Motion", "Responsive design", "Dashboard design", "Dark and light themes"],
   },
 ];
 
 const skillsDe: SkillGroup[] = [
   {
-    category: "KI / ML",
-    items: ["Python", "PyTorch", "scikit-learn", "Transformers", "NLP", "Computer Vision", "Machine Learning", "Deep Learning"],
+    category: "KI & LLMs",
+    items: ["LLMs", "LangGraph", "LangChain", "KI-Agenten", "Multi-Agenten-Systeme", "MCP", "Prompt Engineering", "Strukturierte LLM-Ausgabe", "LoRA fine-tuning", "Hugging Face Transformers", "Ollama", "Anthropic API", "OpenAI API", "Groq", "Langfuse", "RAGAS", "Halluzinations-Guards", "Zitationsprüfung", "Whisper"],
   },
   {
-    category: "Generative KI",
-    items: ["LLMs", "RAG", "Embeddings", "Vector Search", "Hybrid Retrieval", "Reranking", "AI Agents", "Prompt Engineering", "LLM Evaluation"],
+    category: "RAG & Suche",
+    items: ["RAG", "Hybrid-Retrieval", "BM25", "Dense Embeddings", "Sentence-Transformers", "Cross-Encoder-Reranking", "RRF", "Qdrant", "Neo4j", "Vektorsuche", "Retrieval-Evals (Recall@k, MRR)", "PDF-Parsing"],
   },
   {
-    category: "Backend",
-    items: ["Python", "FastAPI", "REST APIs", "PostgreSQL", "Redis", "Celery"],
+    category: "ML & Deep Learning",
+    items: ["PyTorch", "scikit-learn", "XGBoost", "Prophet", "SHAP", "Optuna", "Zeitreihenprognose", "Anomalieerkennung", "Isolation Forest", "Computer Vision", "OpenCV", "torchvision", "Grad-CAM", "Graph Neural Networks", "Reinforcement Learning (PPO)", "Stable-Baselines3", "OR-Tools", "ONNX Runtime"],
   },
   {
-    category: "Infrastruktur",
-    items: ["Docker", "Git", "GitHub", "Linux", "CI/CD", "MLOps"],
+    category: "Sprachen & Daten",
+    items: ["Python", "Java", "TypeScript", "JavaScript", "SQL", "C++", "Bash", "pandas", "NumPy", "SciPy", "DuckDB", "PyArrow", "Pandera", "dbt", "PostgreSQL", "InfluxDB", "SQLite", "Power-BI-fähige Exporte"],
   },
   {
-    category: "Frontend",
-    items: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    category: "Backend & APIs",
+    items: ["FastAPI", "Spring Boot", "REST APIs", "Pydantic", "SQLAlchemy", "Alembic", "Flyway", "Celery", "Redis", "Kafka", "MQTT", "WebSockets", "JWT auth", "Rate Limiting", "Ereignisgesteuertes Design", "Microservices", "MinIO"],
   },
   {
-    category: "Datenbanken / Daten",
-    items: ["PostgreSQL", "Qdrant", "SQLite", "SQL"],
+    category: "DevOps & MLOps",
+    items: ["Docker", "Docker Compose", "Kubernetes", "Helm", "GitHub Actions CI/CD", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "MLflow", "Prefect", "Modell-Registry", "Canary-Rollout und Rollback", "Drift-Erkennung", "Linux", "Git"],
+  },
+  {
+    category: "Testing & Qualität",
+    items: ["pytest", "Vitest", "Playwright", "Testing Library", "Hypothesis", "Locust", "k6", "Lasttests", "Integrationstests", "ruff", "mypy", "ESLint", "Coverage-Berichte", "Dependency-Audits", "Evaluations-Harnesses"],
+  },
+  {
+    category: "Frontend & UI/UX",
+    items: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vite", "Streamlit", "Recharts", "React Query", "Framer Motion", "Responsives Design", "Dashboard-Design", "Dunkle und helle Themes"],
   },
 ];
 

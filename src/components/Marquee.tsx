@@ -2,11 +2,11 @@ export default function Marquee({ items, reverse = false }: { items: string[]; r
   const loop = [...items, ...items];
   return (
     <div className="marquee overflow-hidden py-1" aria-hidden>
-      <div className={`marquee-track ${reverse ? "rev" : ""}`}>
+      <div className={`marquee-track ${reverse ? "rev" : ""}`} style={{ animationDuration: `${Math.round(items.length * 1.6)}s` }}>
         {loop.map((item, i) => (
           <span
             key={`${item}-${i}`}
-            className="flex shrink-0 items-center gap-2 rounded-full border border-line-strong bg-surface px-4 py-1.5 font-mono text-sm text-ink-soft"
+            className="flex shrink-0 items-center gap-2 rounded-full border border-line-strong bg-surface px-3.5 py-1 font-mono text-xs text-ink-soft"
           >
             <span className={i % 2 ? "text-info" : "text-accent"}>✦</span>
             {item}
