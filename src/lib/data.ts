@@ -171,15 +171,6 @@ const educationDe: JourneyEntry[] = [
 
 const experienceEn: JourneyEntry[] = [
   {
-    period: "Currently",
-    title: "Building",
-    place: "Independent projects",
-    description:
-      "Production-ready AI systems, RAG applications, intelligent backend systems, and AI-powered products.",
-    tags: ["RAG", "AI Agents", "Backend Systems"],
-    current: true,
-  },
-  {
     period: "Mar 2025 — Apr 2025",
     title: "Data Science Intern",
     place: "LaunchED Global, Remote (Bengaluru, India)",
@@ -198,15 +189,6 @@ const experienceEn: JourneyEntry[] = [
 ];
 
 const experienceDe: JourneyEntry[] = [
-  {
-    period: "Aktuell",
-    title: "Im Aufbau",
-    place: "Eigene Projekte",
-    description:
-      "Produktionsreife KI-Systeme, RAG-Anwendungen, intelligente Backend-Systeme und KI-gestützte Produkte.",
-    tags: ["RAG", "KI-Agenten", "Backend-Systeme"],
-    current: true,
-  },
   {
     period: "Mär 2025 — Apr 2025",
     title: "Data Science Intern",
@@ -244,7 +226,7 @@ const skillsEn: SkillGroup[] = [
   },
   {
     category: "Backend & APIs",
-    items: ["FastAPI", "Spring Boot", "REST APIs", "Pydantic", "SQLAlchemy", "Alembic", "Flyway", "Celery", "Redis", "Kafka", "MQTT", "WebSockets", "JWT auth", "Rate limiting", "Event-driven design", "Microservices", "MinIO"],
+    items: ["FastAPI", "Spring Boot", "REST APIs", "Pydantic", "SQLAlchemy", "Alembic", "Flyway", "Celery", "Redis", "Kafka", "MQTT", "WebSockets", "JWT auth", "Rate limiting", "n8n automation", "Event-driven design", "Microservices", "MinIO"],
   },
   {
     category: "DevOps & MLOps",
@@ -279,7 +261,7 @@ const skillsDe: SkillGroup[] = [
   },
   {
     category: "Backend & APIs",
-    items: ["FastAPI", "Spring Boot", "REST APIs", "Pydantic", "SQLAlchemy", "Alembic", "Flyway", "Celery", "Redis", "Kafka", "MQTT", "WebSockets", "JWT auth", "Rate Limiting", "Ereignisgesteuertes Design", "Microservices", "MinIO"],
+    items: ["FastAPI", "Spring Boot", "REST APIs", "Pydantic", "SQLAlchemy", "Alembic", "Flyway", "Celery", "Redis", "Kafka", "MQTT", "WebSockets", "JWT auth", "Rate Limiting", "n8n-Automatisierung", "Ereignisgesteuertes Design", "Microservices", "MinIO"],
   },
   {
     category: "DevOps & MLOps",

@@ -10,9 +10,9 @@ export default function OtherWork() {
   const u = ui[lang];
 
   return (
-    <section id="more" className="snap-page container-px mx-auto w-full max-w-6xl py-10">
+    <section id="more" className="snap-page container-px mx-auto w-full max-w-6xl py-4">
       <SectionLabel emoji="🧩" label={u.othersLabel} title={u.othersTitle} />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {others.map((o) => (
           <article
             key={o.name}
@@ -31,9 +31,9 @@ export default function OtherWork() {
                 <GithubIcon size={16} />
               </a>
             </div>
-            <p className="mt-2 text-sm leading-relaxed text-ink-soft">{o.line[lang]}</p>
-            <p className="mt-3 font-mono text-xs text-accent">{o.metric[lang]}</p>
-            <div className="mt-4 flex flex-wrap gap-1.5">
+            <p className="mt-1.5 text-[13px] leading-snug text-ink-soft">{o.line[lang]}</p>
+            <p className="mt-2 font-mono text-xs text-accent">{o.metric[lang]}</p>
+            <div className="mt-2.5 flex flex-wrap gap-1.5">
               {o.stack.map((s) => (
                 <span key={s} className="rounded-full border border-line px-2 py-0.5 font-mono text-[11px] text-info">
                   {s}

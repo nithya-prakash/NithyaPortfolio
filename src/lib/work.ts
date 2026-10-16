@@ -190,18 +190,18 @@ export const others: OtherWork[] = [
     github: "https://github.com/nithya-prakash/AirQualityCascade",
   },
   {
+    name: "ForgeRL",
+    line: { en: "Smart-factory scheduling: a PPO agent vs dispatching rules and OR-Tools CP-SAT under machine breakdowns.", de: "Smart-Factory-Scheduling: PPO-Agent vs. Dispatching-Regeln und OR-Tools CP-SAT bei Maschinenausfällen." },
+    metric: { en: "PPO lost to the best rule by 32%; 47 tests", de: "PPO verlor 32 % gegen die beste Regel; 47 Tests" },
+    stack: ["Reinforcement learning", "Stable-Baselines3", "OR-Tools", "SimPy"],
+    github: "https://github.com/nithya-prakash/ForgeRL",
+  },
+  {
     name: "JobIntelGermany",
     line: { en: "Power BI-ready NLP and data platform for German job-market analysis.", de: "Power-BI-fähige NLP- und Datenplattform zur Analyse des deutschen Arbeitsmarkts." },
     metric: { en: "Skill extraction precision 0.949 (106 ads)", de: "Skill-Extraktion Präzision 0,949 (106 Anzeigen)" },
     stack: ["NLP", "Power BI", "Python"],
     github: "https://github.com/nithya-prakash/JobIntelGermany",
-  },
-  {
-    name: "DeutschAI",
-    line: { en: "Voice and agentic German tutor: LangGraph agents, RAG over grammar notes, local speech.", de: "Sprach- und Agenten-Deutschtutor: LangGraph-Agenten, RAG über Grammatiknotizen, lokale Sprache." },
-    metric: { en: "146 backend tests; covers A1 only", de: "146 Backend-Tests; deckt nur A1 ab" },
-    stack: ["LangGraph", "RAG", "Whisper", "Next.js"],
-    github: "https://github.com/nithya-prakash/DeutschAI",
   },
 ];
 
@@ -295,7 +295,7 @@ export const ui: Record<
     ],
     pops: {
       work: "Psst: every number here comes from a script in the repo.",
-      more: "DeutschAI covers A1 only, and its README says so.",
+      more: "Every README here lists what the project can't do.",
       ask: "Try asking it something it can't know. It will say so.",
       approach: "Boring answer: evaluation first, vibes later.",
       experience: "From Java trainee to RAG systems. Curiosity compounds.",
@@ -354,7 +354,7 @@ export const ui: Record<
     ],
     pops: {
       work: "Psst: Jede Zahl hier stammt aus einem Skript im Repo.",
-      more: "DeutschAI deckt nur A1 ab, und das README sagt es.",
+      more: "Jedes README hier nennt, was das Projekt nicht kann.",
       ask: "Frag etwas, das es nicht wissen kann. Es sagt es dir.",
       approach: "Langweilige Antwort: erst evaluieren, dann Bauchgefühl.",
       experience: "Vom Java-Trainee zu RAG-Systemen. Neugier zahlt sich aus.",
