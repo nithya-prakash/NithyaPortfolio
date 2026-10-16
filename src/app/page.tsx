@@ -9,11 +9,13 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Fx from "@/components/Fx";
+import Backdrop from "@/components/Backdrop";
 import AskPortfolio from "@/components/AskPortfolio";
 
 export default function Home() {
   return (
     <>
+      <Backdrop />
       <Nav />
       <Fx />
       <main>

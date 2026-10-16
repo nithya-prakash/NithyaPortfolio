@@ -43,7 +43,6 @@ export function Research() {
           data-reveal
           className="relative overflow-hidden rounded-2xl border border-line-strong bg-surface p-6 sm:p-8"
         >
-          <div className="glow-lilac pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full" aria-hidden />
           <p className="relative font-mono text-xs text-accent">
             {p.venue} · {p.year} · {p.identifier}
           </p>

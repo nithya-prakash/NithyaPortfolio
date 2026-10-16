@@ -43,7 +43,6 @@ export default function AskPortfolio() {
         data-reveal
         className="relative overflow-hidden rounded-3xl border border-line-strong bg-surface p-5 sm:p-8"
       >
-        <div className="glow-pink pointer-events-none absolute -left-20 -top-20 h-64 w-64 rounded-full" aria-hidden />
         <p className="relative max-w-2xl text-sm leading-relaxed text-ink-soft sm:text-base">{a.sub}</p>
 
         <form
