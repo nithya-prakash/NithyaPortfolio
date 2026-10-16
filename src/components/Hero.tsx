@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="glow-pink pointer-events-none absolute -left-24 top-10 h-96 w-96 rounded-full" aria-hidden />
       <div className="glow-lilac pointer-events-none absolute -right-24 top-40 h-[28rem] w-[28rem] rounded-full" aria-hidden />
 
-      <div className="container-px relative mx-auto grid max-w-6xl items-center gap-10 pt-32 pb-20 sm:pt-40 sm:pb-28 lg:grid-cols-[1.3fr_0.7fr]">
+      <div className="container-px relative mx-auto grid max-w-6xl items-center gap-10 pt-32 pb-20 sm:pt-40 sm:pb-28 lg:pt-6 lg:pb-6 lg:grid-cols-[1.3fr_0.7fr]">
         <div>
           <p className="font-mono text-sm text-accent">✦ $ whoami</p>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight text-ink sm:text-6xl">{t.profile.name}</h1>

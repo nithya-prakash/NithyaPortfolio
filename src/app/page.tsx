@@ -23,10 +23,8 @@ export default function Home() {
         <AskPortfolio />
         <CoffeeBreak />
         <Approach />
-        <div className="snap-page">
-          <Education />
-          <Research />
-        </div>
+        <Education />
+        <Research />
         <Experience />
         <Skills />
         <div className="snap-page">

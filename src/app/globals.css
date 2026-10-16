@@ -257,12 +257,14 @@ body {
 @media (min-width: 1024px) {
   html {
     scroll-snap-type: y mandatory;
+    scroll-padding-top: 0;
   }
 
   .snap-page {
     scroll-snap-align: start;
     scroll-snap-stop: always;
     min-height: 100svh;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;

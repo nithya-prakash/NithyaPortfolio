@@ -1,5 +1,6 @@
 "use client";
 
+import Aside from "@/components/Aside";
 import SectionLabel from "@/components/SectionLabel";
 import { useLanguage } from "@/lib/LanguageContext";
 import { ui } from "@/lib/work";
@@ -23,6 +24,7 @@ export default function Approach() {
           </div>
         ))}
       </div>
+      <Aside i={0} />
     </section>
   );
 }

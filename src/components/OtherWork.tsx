@@ -2,7 +2,6 @@
 
 import SectionLabel from "@/components/SectionLabel";
 import { GithubIcon } from "@/components/icons/BrandIcons";
-import Aside from "@/components/Aside";
 import { useLanguage } from "@/lib/LanguageContext";
 import { others, ui } from "@/lib/work";
 
@@ -13,12 +12,12 @@ export default function OtherWork() {
   return (
     <section id="more" className="snap-page container-px mx-auto w-full max-w-6xl py-10">
       <SectionLabel emoji="🧩" label={u.othersLabel} title={u.othersTitle} />
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {others.map((o) => (
           <article
             key={o.name}
             data-reveal
-            className="flex flex-col rounded-2xl border border-line bg-surface p-5 transition-colors hover:border-accent"
+            className="flex flex-col rounded-2xl border border-line bg-surface p-4 transition-colors hover:border-accent"
           >
             <div className="flex items-start justify-between gap-3">
               <h3 className="font-mono text-sm font-medium text-ink">{o.name}</h3>
@@ -54,7 +53,6 @@ export default function OtherWork() {
           </article>
         ))}
       </div>
-      <Aside i={0} />
     </section>
   );
 }

@@ -8,7 +8,7 @@ export default function SectionLabel({
   emoji?: string;
 }) {
   return (
-    <div className="mb-10">
+    <div className="mb-6">
       <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
         {`// ${label}`}
         {emoji && (

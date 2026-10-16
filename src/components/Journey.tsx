@@ -9,7 +9,7 @@ export function Education() {
   const { lang, t } = useLanguage();
   const u = ui[lang];
   return (
-    <section id="education" className="container-px mx-auto max-w-6xl py-14 sm:py-20">
+    <section id="education" className="snap-page container-px mx-auto max-w-6xl py-8">
       <SectionLabel emoji="🎓" label={u.eduLabel} title={u.eduTitle} />
       <div className="grid gap-4 md:grid-cols-2">
         {[...t.education].reverse().map((e) => (
@@ -35,7 +35,7 @@ export function Research() {
   const { lang, t } = useLanguage();
   const u = ui[lang];
   return (
-    <section id="research" className="container-px mx-auto max-w-6xl py-14 sm:py-20">
+    <section id="research" className="snap-page container-px mx-auto max-w-6xl py-8">
       <SectionLabel emoji="📄" label={u.researchLabel} title={u.researchTitle} />
       {t.publications.map((p) => (
         <article
@@ -61,6 +61,7 @@ export function Research() {
           </div>
         </article>
       ))}
+      <Aside i={1} />
     </section>
   );
 }
@@ -69,11 +70,11 @@ export function Experience() {
   const { lang, t } = useLanguage();
   const u = ui[lang];
   return (
-    <section id="experience" className="snap-page container-px mx-auto max-w-6xl py-14 sm:py-20">
+    <section id="experience" className="snap-page container-px mx-auto max-w-6xl py-8">
       <SectionLabel emoji="💼" label={u.expLabel} title={u.expTitle} />
       <ol className="relative ml-2 border-l border-line-strong">
         {t.experience.map((e) => (
-          <li key={e.title + e.period} data-reveal className="relative pb-10 pl-8 last:pb-0">
+          <li key={e.title + e.period} data-reveal className="relative pb-7 pl-8 last:pb-0">
             <span
               className={`absolute -left-[7px] top-1.5 h-3.5 w-3.5 rounded-full border-2 ${
                 e.current ? "border-accent bg-accent" : "border-accent bg-bg"
@@ -97,7 +98,6 @@ export function Experience() {
           </li>
         ))}
       </ol>
-      <Aside i={1} />
     </section>
   );
 }
