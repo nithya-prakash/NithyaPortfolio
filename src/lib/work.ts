@@ -15,6 +15,7 @@ export type Flagship = {
   stack: string[];
   github: string;
   gif: string;
+  gifSize: [number, number];
   demo?: string;
 };
 
@@ -26,9 +27,6 @@ export type OtherWork = {
   github: string;
   demo?: string;
 };
-
-const raw = (repo: string, path: string) =>
-  `https://raw.githubusercontent.com/nithya-prakash/${repo}/main/${path}`;
 
 export const flagships: Flagship[] = [
   {
@@ -57,7 +55,8 @@ export const flagships: Flagship[] = [
     ],
     stack: ["LangGraph", "RAG", "FastAPI", "Qdrant", "PostgreSQL", "Celery", "Next.js"],
     github: "https://github.com/nithya-prakash/IndustrialAICopilot",
-    gif: raw("IndustrialAICopilot", "docs/images/supervisor-demo.gif"),
+    gif: "/demos/copilot.gif",
+    gifSize: [1100, 680],
   },
   {
     slug: "clauseguard",
@@ -85,7 +84,8 @@ export const flagships: Flagship[] = [
     ],
     stack: ["RAG", "LLM", "LoRA", "Qdrant", "Neo4j", "FastAPI", "Next.js"],
     github: "https://github.com/nithya-prakash/ClauseGuard",
-    gif: raw("ClauseGuard", "docs/demo.gif"),
+    gif: "/demos/clauseguard.gif",
+    gifSize: [760, 486],
   },
   {
     slug: "fleetops",
@@ -113,7 +113,8 @@ export const flagships: Flagship[] = [
     ],
     stack: ["MLOps", "MQTT", "FastAPI", "Prometheus", "Docker", "Kubernetes"],
     github: "https://github.com/nithya-prakash/FleetOps",
-    gif: raw("FleetOps", "docs/demo.gif"),
+    gif: "/demos/fleetops.gif",
+    gifSize: [642, 455],
   },
   {
     slug: "hybridrag",
@@ -141,7 +142,8 @@ export const flagships: Flagship[] = [
     ],
     stack: ["RAG", "Hybrid search", "FastAPI", "Qdrant", "PostgreSQL", "Celery", "Next.js"],
     github: "https://github.com/nithya-prakash/HybridRAG",
-    gif: raw("HybridRAG", "docs/screenshots/demo.gif"),
+    gif: "/demos/hybridrag.gif",
+    gifSize: [880, 496],
     demo: "https://hybridrag-nithya-prakash.vercel.app",
   },
 ];
@@ -243,6 +245,11 @@ export const ui: Record<
     asides: string[];
     pops: Record<string, string>;
     close: string;
+    pauseTools: string;
+    playTools: string;
+    skipToContent: string;
+    menu: string;
+    closeMenu: string;
   }
 > = {
   en: {
@@ -271,7 +278,7 @@ export const ui: Record<
     backgroundLabel: "Background",
     backgroundTitle: "Education, experience, research.",
     skillsLabel: "Skills",
-    nav: { work: "Work", other: "More", about: "Journey", ask: "Ask", skills: "Skills", contact: "Contact" },
+    nav: { work: "Work", other: "More", about: "Experience", ask: "Ask", skills: "Skills", contact: "Contact" },
     approachProof: "Proof",
     eduLabel: "Education",
     eduTitle: "Where I've studied.",
@@ -303,6 +310,11 @@ export const ui: Record<
       contact: "Coffee chat? I'm in Germany and open to Werkstudent roles.",
     },
     close: "Close",
+    pauseTools: "Pause tools row",
+    playTools: "Play tools row",
+    skipToContent: "Skip to content",
+    menu: "Open menu",
+    closeMenu: "Close menu",
   },
   de: {
     status: "Offen für Werkstudent- und Praktikumsstellen in Deutschland",
@@ -330,7 +342,7 @@ export const ui: Record<
     backgroundLabel: "Hintergrund",
     backgroundTitle: "Ausbildung, Erfahrung, Forschung.",
     skillsLabel: "Skills",
-    nav: { work: "Projekte", other: "Mehr", about: "Weg", ask: "Fragen", skills: "Skills", contact: "Kontakt" },
+    nav: { work: "Projekte", other: "Mehr", about: "Erfahrung", ask: "Fragen", skills: "Skills", contact: "Kontakt" },
     approachProof: "Beleg",
     eduLabel: "Ausbildung",
     eduTitle: "Wo ich studiert habe.",
@@ -362,6 +374,11 @@ export const ui: Record<
       contact: "Kaffee-Chat? Ich bin in Deutschland und offen für Werkstudentenstellen.",
     },
     close: "Schließen",
+    pauseTools: "Werkzeug-Reihe anhalten",
+    playTools: "Werkzeug-Reihe abspielen",
+    skipToContent: "Zum Inhalt springen",
+    menu: "Menü öffnen",
+    closeMenu: "Menü schließen",
   },
 };
 

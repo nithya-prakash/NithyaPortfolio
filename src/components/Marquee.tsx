@@ -1,7 +1,15 @@
-export default function Marquee({ items, reverse = false }: { items: string[]; reverse?: boolean }) {
+export default function Marquee({
+  items,
+  reverse = false,
+  paused = false,
+}: {
+  items: string[];
+  reverse?: boolean;
+  paused?: boolean;
+}) {
   const loop = [...items, ...items];
   return (
-    <div className="marquee overflow-hidden py-1" aria-hidden>
+    <div className={`marquee overflow-hidden py-1 ${paused ? "paused" : ""}`} aria-hidden="true" data-nosnippet>
       <div className={`marquee-track ${reverse ? "rev" : ""}`} style={{ animationDuration: `${Math.round(items.length * 1.6)}s` }}>
         {loop.map((item, i) => (
           <span

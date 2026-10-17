@@ -80,8 +80,11 @@ export default function FlagshipWork() {
                 <img
                   src={f.gif}
                   alt={`${f.name} demo`}
+                  width={f.gifSize[0]}
+                  height={f.gifSize[1]}
                   loading="lazy"
-                  className="w-full rounded-lg border border-line bg-bg"
+                  decoding="async"
+                  className="h-auto w-full rounded-lg border border-line bg-bg"
                 />
                 <div className="grid grid-cols-3 gap-3">
                   {f.metrics.map((m) => (

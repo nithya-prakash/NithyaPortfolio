@@ -59,10 +59,10 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-4">
       <div className="grid gap-4 sm:grid-cols-2">
-        <input type="text" name="name" placeholder={t.contactForm.namePlaceholder} required className={fieldClass} />
-        <input type="email" name="email" placeholder={t.contactForm.emailPlaceholder} required className={fieldClass} />
+        <input type="text" name="name" aria-label={t.contactForm.namePlaceholder} autoComplete="name" placeholder={t.contactForm.namePlaceholder} required className={fieldClass} />
+        <input type="email" name="email" aria-label={t.contactForm.emailPlaceholder} autoComplete="email" placeholder={t.contactForm.emailPlaceholder} required className={fieldClass} />
       </div>
-      <textarea name="message" placeholder={t.contactForm.messagePlaceholder} required rows={5} className={fieldClass} />
+      <textarea name="message" aria-label={t.contactForm.messagePlaceholder} placeholder={t.contactForm.messagePlaceholder} required rows={5} className={fieldClass} />
 
       <button
         type="submit"
@@ -73,10 +73,10 @@ export default function ContactForm() {
       </button>
 
       {status === "error" && (
-        <p className="text-sm text-red-400">{t.contactForm.error}</p>
+        <p role="alert" className="text-sm text-red-400">{t.contactForm.error}</p>
       )}
       {status === "unconfigured" && (
-        <p className="text-sm text-ink-faint">{t.contactForm.unconfigured}</p>
+        <p role="status" className="text-sm text-ink-faint">{t.contactForm.unconfigured}</p>
       )}
     </form>
   );

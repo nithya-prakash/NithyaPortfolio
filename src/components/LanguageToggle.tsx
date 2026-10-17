@@ -23,7 +23,7 @@ export default function LanguageToggle() {
             type="button"
             onClick={() => setLang(o.code)}
             aria-pressed={active}
-            aria-label={o.name}
+            aria-label={`${o.label} ${o.name}`}
             title={o.name}
             className={`h-full rounded-full px-2.5 font-semibold transition-colors ${
               active ? "bg-accent text-bg" : "text-ink-soft hover:text-accent"
