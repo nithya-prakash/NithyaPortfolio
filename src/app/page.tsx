@@ -23,10 +23,14 @@ export default function Home() {
         <FlagshipWork />
         <OtherWork />
         <AskPortfolio />
-        <CoffeeBreak />
-        <Approach />
-        <Education />
-        <Research />
+        <div className="snap-page">
+          <Approach />
+          <CoffeeBreak />
+        </div>
+        <div className="snap-page">
+          <Education />
+          <Research />
+        </div>
         <Experience />
         <Skills />
         <div className="snap-page">

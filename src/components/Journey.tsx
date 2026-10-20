@@ -9,7 +9,7 @@ export function Education() {
   const { lang, t } = useLanguage();
   const u = ui[lang];
   return (
-    <section id="education" className="snap-page container-px mx-auto max-w-6xl py-8">
+    <section id="education" className="container-px mx-auto w-full max-w-6xl py-4">
       <SectionLabel emoji="🎓" label={u.eduLabel} title={u.eduTitle} />
       <div className="grid gap-4 md:grid-cols-2">
         {[...t.education].reverse().map((e) => (
@@ -35,7 +35,7 @@ export function Research() {
   const { lang, t } = useLanguage();
   const u = ui[lang];
   return (
-    <section id="research" className="snap-page container-px mx-auto max-w-6xl py-8">
+    <section id="research" className="container-px mx-auto w-full max-w-6xl py-4">
       <SectionLabel emoji="📄" label={u.researchLabel} title={u.researchTitle} />
       {t.publications.map((p) => (
         <article

@@ -172,11 +172,11 @@ const educationDe: JourneyEntry[] = [
 const experienceEn: JourneyEntry[] = [
   {
     period: "Mar 2025 — Apr 2025",
-    title: "Data Science Intern",
+    title: "AI Intern",
     place: "LaunchED Global, Remote (Bengaluru, India)",
     description:
-      "Two-month internship on data science workflows: data analysis, preprocessing, and extracting insights from data with Python and NumPy.",
-    tags: ["Python", "NumPy", "Data Analysis", "Preprocessing"],
+      "Two-month internship gaining practical exposure to AI concepts and development workflows. Built an understanding of AI fundamentals and machine learning techniques, and applied AI approaches to real-world problems while exploring AI tools and intelligent systems.",
+    tags: ["Python", "NumPy", "Machine Learning", "AI Fundamentals"],
   },
   {
     period: "Jul 2024 — Jan 2025",
@@ -191,11 +191,11 @@ const experienceEn: JourneyEntry[] = [
 const experienceDe: JourneyEntry[] = [
   {
     period: "Mär 2025 — Apr 2025",
-    title: "Data Science Intern",
+    title: "AI Intern",
     place: "LaunchED Global, Remote (Bengaluru, Indien)",
     description:
-      "Zweimonatiges Praktikum zu Data-Science-Workflows: Datenanalyse, Vorverarbeitung und Gewinnung von Erkenntnissen mit Python und NumPy.",
-    tags: ["Python", "NumPy", "Datenanalyse", "Vorverarbeitung"],
+      "Zweimonatiges Praktikum mit praktischem Einblick in KI-Konzepte und KI-Entwicklungsworkflows. Grundlagen der KI und Machine-Learning-Techniken erarbeitet und KI-Ansätze auf praxisnahe Problemstellungen angewendet, dabei KI-Tools und intelligente Systeme erkundet.",
+    tags: ["Python", "NumPy", "Machine Learning", "KI-Grundlagen"],
   },
   {
     period: "Jul 2024 — Jan 2025",
