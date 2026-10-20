@@ -281,9 +281,9 @@ const publicationsEn: Publication[] = [
   {
     title: "MediSync – Streamlining Healthcare Continuity",
     venue: "IJRPR",
-    year: "2023",
+    year: "2024",
     identifier: "ISSN 2582-7421",
-    href: "/publications/medisync-ijrpr-2023.pdf",
+    href: "/publications/medisync-ijrpr-2024.pdf",
     summary:
       "A doctor appointment web app connecting patients and doctors directly — search for a doctor, book an appointment, and get reminder notifications, with no third party involved.",
     stack: ["JavaScript", "HTML", "CSS", "Bootstrap", "MySQL", "Spring Boot"],
@@ -294,9 +294,9 @@ const publicationsDe: Publication[] = [
   {
     title: "MediSync – Streamlining Healthcare Continuity",
     venue: "IJRPR",
-    year: "2023",
+    year: "2024",
     identifier: "ISSN 2582-7421",
-    href: "/publications/medisync-ijrpr-2023.pdf",
+    href: "/publications/medisync-ijrpr-2024.pdf",
     summary:
       "Eine Webanwendung für Arzttermine, die Patienten und Ärzte direkt verbindet — Arzt suchen, Termin buchen und Erinnerungen erhalten, ganz ohne Mittelsperson.",
     stack: ["JavaScript", "HTML", "CSS", "Bootstrap", "MySQL", "Spring Boot"],
