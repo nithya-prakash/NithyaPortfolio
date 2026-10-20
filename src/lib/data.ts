@@ -176,7 +176,7 @@ const experienceEn: JourneyEntry[] = [
     place: "LaunchED Global, Remote (Bengaluru, India)",
     description:
       "Two-month internship gaining practical exposure to AI concepts and development workflows. Built an understanding of AI fundamentals and machine learning techniques, and applied AI approaches to real-world problems while exploring AI tools and intelligent systems.",
-    tags: ["Python", "NumPy", "Machine Learning", "AI Fundamentals"],
+    tags: ["Python", "NumPy", "Machine Learning", "AI Fundamentals", "AI Tools", "Intelligent Systems", "Problem Solving"],
   },
   {
     period: "Jul 2024 — Jan 2025",
@@ -184,7 +184,7 @@ const experienceEn: JourneyEntry[] = [
     place: "Palle Technologies, Bengaluru, India",
     description:
       "Completed a structured full stack development programme, gaining experience in Java, Spring Boot, MySQL, and responsive front-end development. Built and tested REST APIs and integrated front-end and back-end components for internal web applications. Demonstrated strong problem-solving, code review participation, and team collaboration across the SDLC.",
-    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack"],
+    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack", "Responsive Front-End", "Code Review", "SDLC", "Teamwork"],
   },
 ];
 
@@ -195,7 +195,7 @@ const experienceDe: JourneyEntry[] = [
     place: "LaunchED Global, Remote (Bengaluru, Indien)",
     description:
       "Zweimonatiges Praktikum mit praktischem Einblick in KI-Konzepte und KI-Entwicklungsworkflows. Grundlagen der KI und Machine-Learning-Techniken erarbeitet und KI-Ansätze auf praxisnahe Problemstellungen angewendet, dabei KI-Tools und intelligente Systeme erkundet.",
-    tags: ["Python", "NumPy", "Machine Learning", "KI-Grundlagen"],
+    tags: ["Python", "NumPy", "Machine Learning", "KI-Grundlagen", "KI-Tools", "Intelligente Systeme", "Problemlösung"],
   },
   {
     period: "Jul 2024 — Jan 2025",
@@ -203,7 +203,7 @@ const experienceDe: JourneyEntry[] = [
     place: "Palle Technologies, Bengaluru, Indien",
     description:
       "Strukturiertes Full-Stack-Entwicklungsprogramm mit Erfahrung in Java, Spring Boot, MySQL und responsiver Frontend-Entwicklung. REST-APIs entwickelt und getestet sowie Frontend- und Backend-Komponenten für interne Webanwendungen integriert. Starke Problemlösungskompetenz, Beteiligung an Code-Reviews und Teamzusammenarbeit über den gesamten SDLC hinweg.",
-    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack"],
+    tags: ["Java", "Spring Boot", "MySQL", "REST APIs", "Full Stack", "Responsives Frontend", "Code Reviews", "SDLC", "Teamarbeit"],
   },
 ];
 
