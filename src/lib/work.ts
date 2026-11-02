@@ -140,7 +140,7 @@ export const flagships: Flagship[] = [
       { value: "93%", label: { en: "hallucination-guard accuracy", de: "Genauigkeit des Halluzinations-Guards" } },
       { value: "284", label: { en: "tests (250 backend, 34 eval)", de: "Tests (250 Backend, 34 Eval)" } },
     ],
-    stack: ["RAG", "Hybrid search", "FastAPI", "Qdrant", "PostgreSQL", "Celery", "Next.js"],
+    stack: ["RAG", "Hybrid search", "FastAPI", "Qdrant", "PostgreSQL", "Celery", "Next.js", "Terraform (AWS)"],
     github: "https://github.com/nithya-prakash/HybridRAG",
     gif: "/demos/hybridrag.gif",
     gifSize: [880, 496],
