@@ -210,7 +210,7 @@ const experienceDe: JourneyEntry[] = [
 const skillsEn: SkillGroup[] = [
   {
     category: "AI & LLMs",
-    items: ["LLMs", "LangGraph", "LangChain", "AI agents", "Multi-agent systems", "MCP", "Prompt engineering", "Structured LLM output", "LoRA fine-tuning", "Hugging Face Transformers", "Ollama", "Anthropic API", "OpenAI API", "Groq", "Langfuse", "RAGAS", "Hallucination guards", "Citation verification", "Whisper"],
+    items: ["LLMs", "LangGraph", "LangChain", "AI agents", "Multi-agent systems", "MCP", "Prompt engineering", "Structured LLM output", "LoRA fine-tuning", "MLX", "Hugging Face Transformers", "Ollama", "Anthropic API", "OpenAI API", "Groq", "Langfuse", "RAGAS", "Hallucination guards", "Citation verification", "Whisper"],
   },
   {
     category: "RAG & Search",
@@ -245,7 +245,7 @@ const skillsEn: SkillGroup[] = [
 const skillsDe: SkillGroup[] = [
   {
     category: "KI & LLMs",
-    items: ["LLMs", "LangGraph", "LangChain", "KI-Agenten", "Multi-Agenten-Systeme", "MCP", "Prompt Engineering", "Strukturierte LLM-Ausgabe", "LoRA fine-tuning", "Hugging Face Transformers", "Ollama", "Anthropic API", "OpenAI API", "Groq", "Langfuse", "RAGAS", "Halluzinations-Guards", "Zitationsprüfung", "Whisper"],
+    items: ["LLMs", "LangGraph", "LangChain", "KI-Agenten", "Multi-Agenten-Systeme", "MCP", "Prompt Engineering", "Strukturierte LLM-Ausgabe", "LoRA fine-tuning", "MLX", "Hugging Face Transformers", "Ollama", "Anthropic API", "OpenAI API", "Groq", "Langfuse", "RAGAS", "Halluzinations-Guards", "Zitationsprüfung", "Whisper"],
   },
   {
     category: "RAG & Suche",

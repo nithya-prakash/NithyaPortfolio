@@ -150,6 +150,27 @@ export const flagships: Flagship[] = [
 
 export const others: OtherWork[] = [
   {
+    name: "LegalLoRA",
+    line: { en: "LoRA fine-tuning of a 3B model on a MacBook (MLX) to extract German legal entities as strict JSON, against zero-shot and 5-shot baselines.", de: "LoRA-Feintuning eines 3B-Modells auf dem MacBook (MLX) zur Extraktion deutscher Rechtsentitäten als striktes JSON, verglichen mit Zero-Shot- und 5-Shot-Baselines." },
+    metric: { en: "Entity F1 0.69 vs 0.37 (5-shot) and 0.05 (zero-shot); 500 held-out sentences", de: "Entitäten-F1 0,69 vs. 0,37 (5-Shot) und 0,05 (Zero-Shot); 500 zurückgehaltene Sätze" },
+    stack: ["MLX", "LoRA", "Qwen2.5-3B", "Streamlit"],
+    github: "https://github.com/nithya-prakash/LegalLoRA",
+  },
+  {
+    name: "FinSight",
+    line: { en: "Banking fraud analytics on synthetic data: streaming scoring, dbt + Dagster warehouse, MLflow-gated models, guarded Text-to-SQL.", de: "Betrugsanalyse im Banking auf synthetischen Daten: Streaming-Scoring, dbt-+-Dagster-Warehouse, MLflow-gesteuerte Modelle, abgesichertes Text-to-SQL." },
+    metric: { en: "PR-AUC 0.95 vs 0.53 rules baseline (synthetic data); 187 tests", de: "PR-AUC 0,95 vs. 0,53 Regel-Baseline (synthetische Daten); 187 Tests" },
+    stack: ["XGBoost", "dbt", "Dagster", "MLflow"],
+    github: "https://github.com/nithya-prakash/FinSight",
+  },
+  {
+    name: "DeutschAI",
+    line: { en: "Voice and agentic German tutor: LangGraph agents, RAG over grammar notes, local speech, spaced repetition.", de: "Sprachbasierter, agentischer Deutsch-Tutor: LangGraph-Agenten, RAG über Grammatiknotizen, lokale Sprache, Spaced Repetition." },
+    metric: { en: "Right grammar note in top 4: 84% (27 of 32); 146 tests", de: "Passende Grammatiknotiz in den Top 4: 84 % (27 von 32); 146 Tests" },
+    stack: ["LangGraph", "RAG", "Whisper", "Next.js"],
+    github: "https://github.com/nithya-prakash/DeutschAI",
+  },
+  {
     name: "InduSense",
     line: { en: "Event-driven industrial IoT monitoring: MQTT, Kafka, anomaly detection, Kubernetes.", de: "Ereignisgesteuertes IIoT-Monitoring: MQTT, Kafka, Anomalieerkennung, Kubernetes." },
     metric: { en: "148 tests; dashboard p95 65 ms at 50 users", de: "148 Tests; Dashboard p95 65 ms bei 50 Nutzern" },
