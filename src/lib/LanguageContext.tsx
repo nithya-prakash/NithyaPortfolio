@@ -17,8 +17,11 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>("en");
 
   useEffect(() => {
+    // Read the saved language after hydration, not during render, so the server HTML and the
+    // first client render match. Setting state here is the intended pattern.
     const stored = window.localStorage.getItem(STORAGE_KEY);
     if (stored === "en" || stored === "de") {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setLangState(stored);
     }
   }, []);

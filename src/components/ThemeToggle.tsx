@@ -1,16 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
 import { useLanguage } from "@/lib/LanguageContext";
 
+const noopSubscribe = () => () => {};
+
 export default function ThemeToggle() {
   const { resolvedTheme, setTheme } = useTheme();
   const { t } = useLanguage();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  // false while rendering on the server and during hydration, true afterwards, so the
+  // placeholder and the real button never disagree.
+  const mounted = useSyncExternalStore(
+    noopSubscribe,
+    () => true,
+    () => false,
+  );
 
   if (!mounted) {
     return <div className="h-9 w-9 rounded-full border border-line-strong" aria-hidden />;
