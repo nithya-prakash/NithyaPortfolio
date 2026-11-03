@@ -206,9 +206,9 @@ export const others: OtherWork[] = [
   },
   {
     name: "AirQualityCascade",
-    line: { en: "PM2.5 and NO2 forecasts for 315 German stations; do neighbouring stations help?", de: "PM2,5- und NO2-Prognosen für 315 deutsche Stationen; helfen Nachbarstationen?" },
+    line: { en: "PM2.5 and NO2 forecasts for 315 German stations; do neighbouring stations help? Also runs as an Airflow DAG with a data-quality gate.", de: "PM2,5- und NO2-Prognosen für 315 deutsche Stationen; helfen Nachbarstationen? Läuft auch als Airflow-DAG mit Datenqualitäts-Gate." },
     metric: { en: "PM2.5 t+1h R² 0.60 vs 0.45 persistence", de: "PM2,5 t+1h R² 0,60 vs. 0,45 Persistenz" },
-    stack: ["XGBoost", "Transformer", "GNN", "Streamlit"],
+    stack: ["XGBoost", "Transformer", "GNN", "Airflow", "Streamlit"],
     github: "https://github.com/nithya-prakash/AirQualityCascade",
   },
   {

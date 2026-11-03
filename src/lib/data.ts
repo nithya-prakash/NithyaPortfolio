@@ -230,7 +230,7 @@ const skillsEn: SkillGroup[] = [
   },
   {
     category: "DevOps & MLOps",
-    items: ["Docker", "Docker Compose", "Kubernetes", "Helm", "GitHub Actions CI/CD", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "MLflow", "Prefect", "Model registry", "Canary rollout and rollback", "Drift detection", "Linux", "Git"],
+    items: ["Docker", "Docker Compose", "Kubernetes", "Helm", "GitHub Actions CI/CD", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "MLflow", "Prefect", "Airflow", "Model registry", "Canary rollout and rollback", "Drift detection", "Linux", "Git"],
   },
   {
     category: "Testing & Quality",
@@ -265,7 +265,7 @@ const skillsDe: SkillGroup[] = [
   },
   {
     category: "DevOps & MLOps",
-    items: ["Docker", "Docker Compose", "Kubernetes", "Helm", "GitHub Actions CI/CD", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "MLflow", "Prefect", "Modell-Registry", "Canary-Rollout und Rollback", "Drift-Erkennung", "Linux", "Git"],
+    items: ["Docker", "Docker Compose", "Kubernetes", "Helm", "GitHub Actions CI/CD", "Prometheus", "Grafana", "OpenTelemetry", "Jaeger", "MLflow", "Prefect", "Airflow", "Modell-Registry", "Canary-Rollout und Rollback", "Drift-Erkennung", "Linux", "Git"],
   },
   {
     category: "Testing & Qualität",
