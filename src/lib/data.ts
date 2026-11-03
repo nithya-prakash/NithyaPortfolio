@@ -218,7 +218,7 @@ const skillsEn: SkillGroup[] = [
   },
   {
     category: "ML & Deep Learning",
-    items: ["PyTorch", "scikit-learn", "XGBoost", "Prophet", "SHAP", "Optuna", "Time-series forecasting", "Anomaly detection", "Isolation Forest", "Computer vision", "OpenCV", "torchvision", "Grad-CAM", "Graph neural networks", "Reinforcement learning (PPO)", "Stable-Baselines3", "OR-Tools", "ONNX Runtime"],
+    items: ["PyTorch", "scikit-learn", "XGBoost", "Prophet", "SHAP", "Optuna", "Time-series forecasting", "Anomaly detection", "Isolation Forest", "Computer vision", "Object detection (YOLOv8)", "OpenCV", "torchvision", "Grad-CAM", "Graph neural networks", "Reinforcement learning (PPO)", "Stable-Baselines3", "OR-Tools", "ONNX Runtime"],
   },
   {
     category: "Languages & Data",
@@ -253,7 +253,7 @@ const skillsDe: SkillGroup[] = [
   },
   {
     category: "ML & Deep Learning",
-    items: ["PyTorch", "scikit-learn", "XGBoost", "Prophet", "SHAP", "Optuna", "Zeitreihenprognose", "Anomalieerkennung", "Isolation Forest", "Computer Vision", "OpenCV", "torchvision", "Grad-CAM", "Graph Neural Networks", "Reinforcement Learning (PPO)", "Stable-Baselines3", "OR-Tools", "ONNX Runtime"],
+    items: ["PyTorch", "scikit-learn", "XGBoost", "Prophet", "SHAP", "Optuna", "Zeitreihenprognose", "Anomalieerkennung", "Isolation Forest", "Computer Vision", "Objekterkennung (YOLOv8)", "OpenCV", "torchvision", "Grad-CAM", "Graph Neural Networks", "Reinforcement Learning (PPO)", "Stable-Baselines3", "OR-Tools", "ONNX Runtime"],
   },
   {
     category: "Sprachen & Daten",

@@ -144,7 +144,6 @@ export const flagships: Flagship[] = [
     github: "https://github.com/nithya-prakash/HybridRAG",
     gif: "/demos/hybridrag.gif",
     gifSize: [880, 496],
-    demo: "https://hybridrag-nithya-prakash.vercel.app",
   },
 ];
 
@@ -193,9 +192,9 @@ export const others: OtherWork[] = [
   },
   {
     name: "DefectVisionAI",
-    line: { en: "Defect inspection on MVTec AD: PatchCore-style detector vs ResNet18, human review routing.", de: "Defektprüfung auf MVTec AD: PatchCore-Detektor vs. ResNet18, Weiterleitung an Prüfer." },
-    metric: { en: "PatchCore-lite AUROC 0.944 vs 0.577 baseline", de: "PatchCore-lite AUROC 0,944 vs. 0,577 Baseline" },
-    stack: ["PyTorch", "Computer Vision", "FastAPI"],
+    line: { en: "Defect inspection on MVTec AD: PatchCore-style detector vs ResNet18, human review routing, plus a YOLOv8 weld-defect detector.", de: "Defektprüfung auf MVTec AD: PatchCore-Detektor vs. ResNet18, Weiterleitung an Prüfer, plus ein YOLOv8-Detektor für Schweißnahtfehler." },
+    metric: { en: "PatchCore-lite AUROC 0.944 vs 0.577 baseline; YOLOv8n weld mAP50 0.59", de: "PatchCore-lite AUROC 0,944 vs. 0,577 Baseline; YOLOv8n Schweißnähte mAP50 0,59" },
+    stack: ["PyTorch", "Computer Vision", "YOLOv8", "FastAPI"],
     github: "https://github.com/nithya-prakash/DefectVisionAI",
   },
   {
