@@ -151,7 +151,7 @@ export const others: OtherWork[] = [
   {
     name: "LegalLoRA",
     line: { en: "LoRA fine-tuning of a 3B model on a MacBook (MLX) to extract German legal entities as strict JSON, against zero-shot and 5-shot baselines.", de: "LoRA-Feintuning eines 3B-Modells auf dem MacBook (MLX) zur Extraktion deutscher Rechtsentitäten als striktes JSON, verglichen mit Zero-Shot- und 5-Shot-Baselines." },
-    metric: { en: "Entity F1 0.69 vs 0.37 (5-shot) and 0.05 (zero-shot); 500 held-out sentences", de: "Entitäten-F1 0,69 vs. 0,37 (5-Shot) und 0,05 (Zero-Shot); 500 zurückgehaltene Sätze" },
+    metric: { en: "Entity F1 0.72 vs 0.37 (5-shot) and 0.05 (zero-shot); 500 held-out sentences", de: "Entitäten-F1 0,72 vs. 0,37 (5-Shot) und 0,05 (Zero-Shot); 500 zurückgehaltene Sätze" },
     stack: ["MLX", "LoRA", "Qwen2.5-3B", "Streamlit"],
     github: "https://github.com/nithya-prakash/LegalLoRA",
   },
